@@ -1,0 +1,15 @@
+AzoNet-Online (Google Colaboratory):
+Notebook: Use Azo-Net, in this notebook the user can test the model from a notebook in Google Colaboratory, the model AzoNet,
+background data, and a test sample will be downloaded. The notebook presents the plot of the spectrum as well as the 
+normalized spectrum. The prediction is done using Keras, at the final section the user can compare the predicted spectrum with 
+the predicted thickness value vs the original sample. The link to enter this notebook is: https://drive.google.com/file/d/1GrzHIK72-Ef4cB6Rb5x1xiAb0j33JjTJ/view?usp=sharing
+
+Notebook: Differential Evolution, in this notebook, the user can test the differential evolution fitting algorithm to fit 
+experimental transmittance spectrum with model ones using Alonso's Theorical Model. Background data as well as test sample are
+downloaded. The algorithm requieres a spectrum transmittance sample and a initial guess for the thickness value with an uncertanty in nm. 
+The algorithm will return the best parameters to match both spectrums, these are thickness, rugosidad, sellmeier coefficients,
+absortion values, carrier density. The link to enter this notebook is: https://drive.google.com/file/d/15EbgNeVvbOfmeEGj0bpYkEV0Z7w-XsVT/view?usp=drive_link
+
+Paper: Azo-Net, link: https://drive.google.com/file/d/1N6BsIT4LwhARQ4yRIbl_14EuwTKT8wG7/view?usp=drive_link
+
+

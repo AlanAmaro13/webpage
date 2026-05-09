@@ -56,23 +56,89 @@
         </div>
         <div class="project-meta-item">
           <h4>Performance</h4>
-          <p>MAPE 7% &middot; R² 0.93</p>
+          <p>MAPE 1.16% (synthetic) &middot; MAPE 6.91% (experimental) &middot; MAE 5.1 nm</p>
         </div>
+      </div>
+
+      <div class="project-authors">
+        <h4>Authors</h4>
+        <p>Victor Manuel Guerrero-Sosa, Angelica Carrillo-Verduzco, Juan Carlos Alonso-Huitrón, Alan Gabriel Amaro-Colin, Xim Bokhimi</p>
+        <p class="author-affil">Instituto de Investigación en Materiales &amp; Instituto de Física, Universidad Nacional Autónoma de México</p>
       </div>
 
       <div class="project-body">
         <h2>Overview</h2>
         <p>
-          Led the end-to-end development of a Deep Convolutional Network (U-NET) named AzoNet to predict thin-film thickness
-          from optical transmittance spectra. The model was designed to serve as a rapid, non-destructive characterization tool
-          for materials science laboratories, replacing slower and more expensive traditional measurement techniques.
+          Transparent conductive oxides (TCOs) are wide-bandgap semiconductors that combine high optical transparency with
+          remarkable electrical conductivity, making them essential in LEDs, photovoltaics, flat-panel displays, and touch screens.
+          While indium tin oxide (ITO) dominates commercial applications, its high cost and supply instability have driven the search
+          for alternatives. Aluminium-doped zinc oxide (AZO) has emerged as a promising, cost-effective replacement with comparable
+          optoelectronic performance.
+        </p>
+        <p>
+          Accurate thin-film thickness measurement is critical for device fabrication and performance optimization, yet conventional
+          techniques — profilometry, ellipsometry, AFM, cross-sectional SEM — are often complex, costly, and time-consuming.
+          AzoNet addresses this gap by using a supervised deep learning approach to predict AZO thin-film thickness directly from
+          optical transmittance spectra, providing a rapid, non-destructive, and accurate characterization tool.
+        </p>
+        <p>
+          The model is a deep convolutional neural network built on an encoder-decoder architecture with short skip connections
+          (inspired by U-Net), followed by a fully connected neural network. The system was trained on 1.2 million synthetic
+          spectra generated from a 13-parameter optical model fitted to 145 experimental AZO films (100–1500 nm), using
+          Gaussian Mixture Models to capture parameter distributions across five thickness regions. On the test set of 108,000
+          synthetic samples, AzoNet achieved a MAPE of 1.16% and an MAE of 5.1 nm. On the 145 experimental films, the model
+          achieved a MAPE of 6.91%, demonstrating strong generalization to real-world measurements.
+        </p>
+
+        <h2>Methodology &amp; Architecture</h2>
+
+        <h3>Data Generation</h3>
+        <p>
+          145 AZO thin films were fabricated with thicknesses ranging from 100 to 1500 nm, and their transmittance spectra were
+          measured over 190–1100 nm (911 data points per spectrum at 1 nm resolution). Each spectrum was fitted using a 13-parameter
+          optical model — including thickness, absorption coefficient, refractive index via the Sellmeier equation, surface roughness,
+          and carrier concentration — optimized via the Differential Evolution algorithm.
+        </p>
+        <p>
+          The fitted parameters were grouped into five thickness regions (100–250, 250–600, 600–950, 950–1100, and 1100–1500 nm).
+          Within each region, Gaussian Mixture Models (GMMs) captured the parameter distributions. Using these distributions,
+          1.2 million synthetic samples were generated — 240,000 per region — each consisting of 911 transmittance values as input
+          features and the corresponding film thickness as the target. The dataset was split 90% training, 1% validation, and
+          9% testing.
+        </p>
+
+        <h3>CNN Architecture</h3>
+        <p>
+          The network consists of two main components. The first is an encoder-decoder with short skip connections between
+          corresponding layers (inspired by U-Net), which transforms the input spectrum into a richer feature representation:
+        </p>
+        <ul>
+          <li><strong>Encoder:</strong> Four blocks — two convolutional layers with kernel sizes of 150 and 50, each with Leaky ReLU activation and batch normalization, interspersed with average pooling layers (stride 4) for downsampling: 911 → 227 → 56 features.</li>
+          <li><strong>Latent Space:</strong> Two convolutional layers (kernel size 5) producing 84 feature maps with 56 features each.</li>
+          <li><strong>Decoder:</strong> Four blocks with nearest-neighbor upsampling (scale factor 4), progressively restoring spatial resolution (56 → 227 → 911 features). Skip connections concatenate encoder feature maps into corresponding decoder layers, helping recover high-resolution details.</li>
+          <li><strong>FCNN:</strong> The decoder output (911 features) feeds into a fully connected network with three hidden layers (470, 340, and 330 nodes), each with dropout (0.35) and batch normalization. The output layer uses ReLU activation to predict thickness.</li>
+        </ul>
+
+        <h3>Training &amp; Hyperparameter Tuning</h3>
+        <p>
+          Hyperparameters were optimized using <strong>Keras Tuner</strong> with the Bayesian optimization algorithm across 300 trials
+          (2 executions each), searching over initial filter counts (21), node counts (470/340/330), and dropout rates (0.35).
+          The final model was trained for <strong>100 epochs</strong> with the Adam optimizer (learning rate 0.001), MAE as the loss
+          function, and a batch size of 512. Training was performed on a Tesla V100 GPU (32 GB).
+        </p>
+        <p>
+          For comparison, a baseline fully connected neural network (FCNN) with three hidden layers was also evaluated,
+          achieving an MAE of 15.6 nm — nearly three times worse than the CNN's 5.1 nm — highlighting the significant
+          advantage of the encoder-decoder architecture for extracting meaningful features from spectral data.
         </p>
 
         <h2>Key Achievements</h2>
         <ul>
-          <li>Augmented the dataset with <strong>1.2 million synthetic samples</strong> generated from Gaussian Mixture distributions, dramatically improving model generalization and robustness.</li>
-          <li>Applied global optimization techniques (<strong>Differential Evolution</strong>) for non-linear curve fitting, enhancing model accuracy and robustness in parameter estimation.</li>
-          <li>Achieved <strong>MAPE of 7%</strong> and <strong>R² of 0.93</strong> on 145 experimental samples with rigorous cross-validation.</li>
+          <li>Generated <strong>1.2 million synthetic samples</strong> from Gaussian Mixture Model distributions across five thickness regions, capturing realistic parameter variability from 145 experimental AZO films to dramatically improve model generalization and robustness.</li>
+          <li>Applied global optimization techniques (<strong>Differential Evolution</strong>) for fitting a 13-parameter optical model to experimental transmittance spectra, extracting physically meaningful parameters for downstream synthesis.</li>
+          <li>Achieved <strong>MAPE of 1.16%</strong> and <strong>MAE of 5.1 nm</strong> on 108,000 synthetic test samples, and <strong>MAPE of 6.91%</strong> on 145 experimental films with rigorous cross-validation.</li>
+          <li>Optimized network hyperparameters using <strong>Keras Tuner</strong> with <strong>Bayesian optimization</strong> across 300 trials, searching over convolutional filter counts, dense layer sizes, and dropout rates.</li>
+          <li>Outperformed a baseline <strong>FCNN (MAE 15.6 nm)</strong> by nearly 3× using the encoder-decoder CNN architecture with short skip connections, demonstrating the power of deep feature extraction on spectral data.</li>
           <li>Developed a <strong>standalone executable with a user-friendly GUI</strong> (TTK Bootstrap) for deploying and visualizing predictions, making the tool accessible for non-technical users and laboratory staff.</li>
           <li>Disseminated findings at the <strong>Congreso Nacional de Física 2025</strong> in Mexico.</li>
           <li>Authored a manuscript currently <strong>under peer-review at the Journal of Materials Chemistry C (RSC)</strong>.</li>
@@ -81,13 +147,39 @@
         <div class="project-tags">
           <span class="tag">U-NET</span>
           <span class="tag">TensorFlow</span>
+          <span class="tag">Keras</span>
           <span class="tag tag-gold">Synthetic Data (1.2M samples)</span>
           <span class="tag">Gaussian Mixture Models</span>
           <span class="tag">Differential Evolution</span>
+          <span class="tag">Keras Tuner</span>
+          <span class="tag">Bayesian Optimization</span>
+          <span class="tag">Encoder-Decoder</span>
+          <span class="tag">Skip Connections</span>
+          <span class="tag">Leaky ReLU</span>
+          <span class="tag">Batch Normalization</span>
           <span class="tag">TTKBootstrap</span>
           <span class="tag">Tkinter GUI</span>
           <span class="tag">Non-linear Curve Fitting</span>
           <span class="tag">Scientific Computing</span>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 2.5rem;">Resources</h2>
+      <div class="project-links">
+        <div class="project-link-item">
+          <h4>Use Azo-Net — Google Colaboratory</h4>
+          <p>Interactive notebook to test the AzoNet model. Downloads the model, background data, and a test sample. Presents a plot of the spectrum and normalized spectrum, runs predictions using Keras, and compares the predicted thickness against the original sample.</p>
+          <a href="https://drive.google.com/file/d/1GrzHIK72-Ef4cB6Rb5x1xiAb0j33JjTJ/view?usp=sharing" target="_blank" rel="noopener">Open Notebook &rarr;</a>
+        </div>
+        <div class="project-link-item">
+          <h4>Differential Evolution — Google Colaboratory</h4>
+          <p>Notebook for fitting experimental transmittance spectra using Alonso's theoretical model via the Differential Evolution algorithm. Requires a transmittance spectrum sample and an initial thickness guess with uncertainty. Returns optimized parameters: thickness, roughness, Sellmeier coefficients, absorption values, and carrier density.</p>
+          <a href="https://drive.google.com/file/d/15EbgNeVvbOfmeEGj0bpYkEV0Z7w-XsVT/view?usp=drive_link" target="_blank" rel="noopener">Open Notebook &rarr;</a>
+        </div>
+        <div class="project-link-item">
+          <h4>Azo-Net Paper</h4>
+          <p>Full manuscript: "Using Deep Learning to Determine the Thickness of AZO Thin Films" — currently under peer-review at the Journal of Materials Chemistry C (RSC).</p>
+          <a href="https://drive.google.com/file/d/1N6BsIT4LwhARQ4yRIbl_14EuwTKT8wG7/view?usp=drive_link" target="_blank" rel="noopener">View Paper &rarr;</a>
         </div>
       </div>
 
