@@ -137,4 +137,25 @@
       }, 2500);
     });
   }
+
+  const counterDisplay = document.getElementById('visitorCount');
+  const counterWrapper = document.getElementById('visitorCounter');
+
+  if (counterDisplay && counterWrapper) {
+    const today = new Date().toISOString().slice(0, 10);
+    const lastVisit = localStorage.getItem('lastVisitDate');
+    let count = parseInt(localStorage.getItem('visitorCount'), 10) || 0;
+
+    if (lastVisit !== today) {
+      count += 1;
+      localStorage.setItem('visitorCount', count);
+      localStorage.setItem('lastVisitDate', today);
+      counterWrapper.classList.add('pulse');
+      setTimeout(function () {
+        counterWrapper.classList.remove('pulse');
+      }, 600);
+    }
+
+    counterDisplay.textContent = count.toLocaleString();
+  }
 })();

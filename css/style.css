@@ -590,6 +590,60 @@ img {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+.visitor-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.visitor-icon {
+  color: var(--accent);
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+
+.visitor-count {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  position: relative;
+  display: inline-block;
+  min-width: 1.6em;
+  text-align: center;
+}
+
+.visitor-count::after {
+  content: '';
+  position: absolute;
+  inset: -2px -6px;
+  border-radius: 4px;
+  background: var(--accent-glow);
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.visitor-counter.pulse .visitor-count::after {
+  opacity: 1;
+  animation: counterPulse 0.6s ease;
+}
+
+@keyframes counterPulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.4); opacity: 0.15; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+.visitor-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
 .footer-copy {
   font-size: 0.8rem;
   color: var(--text-muted);
