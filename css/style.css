@@ -458,6 +458,36 @@ img {
   background: rgba(79, 209, 197, 0.06);
 }
 
+/* ===== Languages List ===== */
+.lang-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.lang-list li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  padding: 0.55rem 1.1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  line-height: 1.5;
+}
+
+.lang-list li:hover {
+  border-color: var(--accent);
+  background: rgba(79, 209, 197, 0.06);
+}
+
+.lang-list li strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
 /* ===== Contact Section ===== */
 .contact-grid {
   display: grid;
