@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QSAR Modeling — Alan Amaro</title>
+  <title>FZ-QSAR — Alan Amaro</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -40,8 +40,8 @@
       </a>
 
       <div class="project-header">
-        <div class="institution">Institute of Chemistry &amp; Multidisciplinary Research Unit, FES Zaragoza; UNAM</div>
-        <h1>QSAR Predictive Modeling</h1>
+        <div class="institution">Institute of Chemistry, Institute of Physics &amp; FES Zaragoza, UNAM</div>
+        <h1>FZ-QSAR — Predictive Modeling of Antibiotic Properties</h1>
         <div class="date">May 2025 — December 2025 &middot; Mexico City</div>
       </div>
 
@@ -56,25 +56,103 @@
         </div>
         <div class="project-meta-item">
           <h4>Performance</h4>
-          <p>MAPE 5.52% &middot; R² 0.81</p>
+          <p>Avg R² 0.81 &middot; Q²Ext &middot; Q² &middot; GF</p>
         </div>
+      </div>
+
+      <div class="project-authors">
+        <h4>Authors</h4>
+        <p>Alan Gabriel Amaro-Colin, E. Correa-Padilla, M. López-Ortiz, K. Martinez-Mayorga</p>
+        <p class="author-affil">Instituto de Química, Instituto de Física &amp; Facultad de Estudios Superiores Zaragoza, Universidad Nacional Autónoma de México</p>
       </div>
 
       <div class="project-body">
         <h2>Overview</h2>
         <p>
-          Led the development of Quantitative Structure-Activity Relationship (QSAR) models to predict the biological activity
-          of molecules related to Alzheimer's disease. Using Deep Neural Networks with Keras 3 and Mutual Information for
-          feature selection, the model achieved a Mean Absolute Percentage Error (MAPE) of 7.3% and a Q² Ext of 0.87 on
-          Alzheimer's-related compounds. Demonstrated the framework's versatility by successfully adapting and validating
-          the same architecture for antibiotic discovery with comparable performance.
+          Artificial Intelligence is transforming every area of society, and within STEM it has found numerous applications in
+          modeling highly complex non-linear interactions. In the field of Cheminformatics, the Structure-Activity Relationship
+          (SAR) hypothesis states that similar molecules possess similar properties, enabling the creation of mathematical models
+          to map from molecular structure to biological activity.
+        </p>
+        <p>
+          QSAR (Quantitative Structure-Activity Relationship) models allow the prediction of properties of interest from molecular
+          features. By representing a molecule as a graph, it is possible to employ mathematical operators to obtain intrinsic
+          structural properties — known as molecular descriptors. Through Information Theory, we introduce Mutual Information to
+          select the descriptors with the greatest statistical dependence on bioactivity. The result is <strong>FZ-QSAR</strong>,
+          an Artificial Neural Network model for predicting antibiotic activity of novel compounds that integrates the topological
+          representation of molecules with Mutual Information-based descriptor selection.
+        </p>
+        <p>
+          The model was applied to screen the <strong>LANaPDB</strong> (Latin American Natural Products Database), containing
+          13,578 natural compounds. After applying Lipinski's Rule of Five, leverage analysis, and minimum Euclidean distance
+          criteria within the applicability domain, five highly promising antibiotic candidates were identified.
+        </p>
+
+        <h2>Methodology &amp; Architecture</h2>
+
+        <h3>Data &amp; Molecular Descriptors</h3>
+        <p>
+          A curated dataset of <strong>71 compounds</strong> with experimentally reported antibiotic activity was compiled. For each
+          molecule, <strong>1,218 molecular descriptors</strong> (2D and 3D) were calculated using <strong>Mordred</strong>, a
+          high-performance molecular descriptor calculator. These descriptors encode diverse structural and physicochemical
+          properties including atom counts, topological indices, electrostatic properties, and 3D geometric features.
+        </p>
+
+        <h3>Feature Selection via Mutual Information</h3>
+        <p>
+          Mutual Information <code>MI(X, Y)</code> is a method for determining statistical dependence between variables X and Y,
+          independent of the nature of their relationship (linear or non-linear). In this work, Mutual Information enabled the
+          identification of molecular descriptors X that carry the most information about antibiotic bioactivity Y.
+        </p>
+        <p>
+          Our custom implementation of the <strong>mRMR</strong> (minimum Redundancy — Maximum Relevance) algorithm was applied to
+          select an optimal, non-redundant subset of descriptors. From the initial 1,218 descriptors, 99 were retained with
+          <strong>MI ≥ 0.4</strong>, and the mRMR procedure further distilled these to <strong>10 independent descriptors</strong>,
+          out of which <strong>8 were selected</strong> for the final model:
+        </p>
+        <p style="text-align:center;font-family:monospace;background:rgba(255,215,0,0.08);padding:1rem;border-radius:8px;">
+          <strong>piPC4 &middot; GATS3i &middot; SssNH &middot; AXp-3dv &middot; ATSC1s &middot; n6HRing &middot; GATS5p &middot; SMR_VSA4</strong>
+        </p>
+
+        <h3>Model Architecture &amp; Hyperparameter Optimization</h3>
+        <p>
+          The predictive model was built using <strong>Deep Neural Networks with Keras 3</strong>. Hyperparameters were optimized
+          through <strong>Bayesian Optimization</strong> using <strong>Keras Tuner</strong> with <strong>K-Fold Cross-Validation
+          (K = 7)</strong> employing stratified folds to ensure representative activity distribution across all splits.
+        </p>
+        <p>
+          The optimized architecture used the following configuration:
+        </p>
+        <ul>
+          <li><strong>Hidden Layer Nodes:</strong> 385 (average across folds)</li>
+          <li><strong>Activation Function:</strong> LeakyReLU</li>
+          <li><strong>Dropout Rate:</strong> 23%</li>
+          <li><strong>Regularization:</strong> L1 = 0.003 / L2 = 0.287</li>
+          <li><strong>Optimizer:</strong> Adam</li>
+          <li><strong>Loss Function:</strong> MAE (Mean Absolute Error)</li>
+        </ul>
+
+        <h3>Applicability Domain &amp; LANaPDB Virtual Screening</h3>
+        <p>
+          To ensure reliable predictions, a rigorous applicability domain was established. The <strong>LANaPDB</strong> database of
+          13,578 Latin American natural products was first filtered by <strong>Lipinski's Rule of Five</strong>, retaining 12,077
+          drug-like compounds. A <strong>Williams plot</strong> (standardized residuals vs. leverage values) was then used to
+          identify compounds within the model's structural domain. Finally, <strong>minimum Euclidean distance</strong> in the
+          chemical space was applied to select the 5 most confident candidates within the applicability domain.
+        </p>
+        <p>
+          <strong>Promising compounds identified:</strong> LANaPDB3249, LANaPDB3812, LANaPDB3823, LANaPDB3881, and LANaPDB5144
+          with predicted antibiotic activity in the range of ≈ 5.0–5.4.
         </p>
 
         <h2>Key Achievements</h2>
         <ul>
-          <li>Developed QSAR models using <strong>Deep Neural Networks (Keras 3)</strong> and <strong>Mutual Information</strong> for feature selection.</li>
-          <li>Achieved <strong>MAPE of 5.52%</strong> and <strong>R² of 0.81</strong> in K-Fold cross-validation for antibiotic-related molecules.</li>
-          <li>Alzheimer's model reached <strong>MAPE of 7.3%</strong> and <strong>Q² Ext of 0.87</strong> during external validation.</li>
+          <li>Developed <strong>FZ-QSAR</strong>, a robust QSAR framework combining <strong>Mutual Information</strong> from Information Theory with <strong>Deep Neural Networks</strong> for antibiotic activity prediction.</li>
+          <li>Implemented a custom <strong>mRMR</strong> (minimum Redundancy — Maximum Relevance) algorithm for feature selection, reducing 1,218 Mordred descriptors to an optimal, non-redundant set of 8.</li>
+          <li>Optimized the neural network using <strong>Keras Tuner</strong> with <strong>Bayesian optimization</strong> and <strong>K-Fold Cross-Validation (K = 7)</strong> with stratification, achieving an <strong>Avg R² of 0.81</strong>.</li>
+          <li>Established a rigorous <strong>applicability domain</strong> using Lipinski's Rule, Williams plot (leverage analysis), and minimum Euclidean distance for reliable virtual screening.</li>
+          <li>Screened the <strong>LANaPDB</strong> database (13,578 natural compounds) and identified <strong>5 highly promising antibiotic candidates</strong> (LANaPDB3249, LANaPDB3812, LANaPDB3823, LANaPDB3881, LANaPDB5144) with predicted activity ≈ 5.0–5.4.</li>
+          <li>Achieved strong generalization metrics — <strong>Q²Ext, Q², GF, and Avg R²</strong> — indicating high predictive capacity with minimal overfitting.</li>
           <li>Successfully <strong>presented findings at the internal research symposium</strong> of the Institute of Chemistry.</li>
           <li>Prepared a manuscript detailing methodology and results, in <strong>final stages of preparation for submission to arXiv</strong>.</li>
         </ul>
@@ -83,17 +161,36 @@
           <span class="tag">Keras 3</span>
           <span class="tag">Deep Neural Networks</span>
           <span class="tag tag-gold">Mutual Information</span>
+          <span class="tag">mRMR</span>
+          <span class="tag">Mordred</span>
           <span class="tag">Feature Selection</span>
           <span class="tag">K-Fold Cross-Validation</span>
-          <span class="tag">Alzheimer's Disease</span>
-          <span class="tag">Antibiotic Discovery</span>
+          <span class="tag">Bayesian Optimization</span>
+          <span class="tag">LeakyReLU</span>
+          <span class="tag">Lipinski Rule</span>
+          <span class="tag">LANaPDB</span>
+          <span class="tag">Applicability Domain</span>
           <span class="tag">QSAR</span>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 2.5rem;">Resources</h2>
+      <div class="project-links">
+        <div class="project-link-item">
+          <h4>FZ-QSAR on GitHub</h4>
+          <p>Source code repository with the full implementation of the FZ-QSAR pipeline, including Mordred descriptor calculation, mRMR feature selection, and Keras-based neural network training with Bayesian optimization.</p>
+          <a href="https://github.com/AlanAmaro13" target="_blank" rel="noopener">View Repository &rarr;</a>
+        </div>
+        <div class="project-link-item">
+          <h4>Preprint (arXiv)</h4>
+          <p>Full manuscript detailing the FZ-QSAR methodology, Mutual Information-based feature selection, model architecture, and LANaPDB virtual screening results — in final stages of preparation.</p>
+          <a href="#" target="_blank" rel="noopener">Coming Soon &rarr;</a>
         </div>
       </div>
 
       <h2 style="margin-top: 2.5rem;">Gallery</h2>
       <div class="project-gallery">
-        <img src="../images/internal_symposium_institute_chemistry/poster.jpeg" alt="QSAR Research Poster">
+        <img src="../images/internal_symposium_institute_chemistry/poster.jpeg" alt="FZ-QSAR Research Poster">
         <img src="../images/internal_symposium_institute_chemistry/picture_with_staff.jpeg" alt="With research staff">
         <img src="../images/internal_symposium_institute_chemistry/picture_with_staff2.jpeg" alt="At the Institute of Chemistry">
       </div>
