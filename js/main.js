@@ -58,43 +58,23 @@
   window.addEventListener('scroll', revealOnScroll, { passive: true });
   revealOnScroll();
 
-  /* ===== Contact form ===== */
+  /* ===== Contact form (opens email provider via mailto) ===== */
   var contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      var btn = contactForm.querySelector('button[type="submit"]');
-      var originalText = btn.textContent;
-      btn.textContent = 'Message Sent!';
-      btn.disabled = true;
 
-      setTimeout(function () {
-        btn.textContent = originalText;
-        btn.disabled = false;
-        contactForm.reset();
-      }, 2500);
+      var name = (document.getElementById('name') || {}).value || '';
+      var email = (document.getElementById('email') || {}).value || '';
+      var message = (document.getElementById('message') || {}).value || '';
+
+      var subject = encodeURIComponent('Portfolio contact from ' + name);
+      var body = encodeURIComponent(
+        'Name: ' + name + '\nEmail: ' + email + '\n\n' + message
+      );
+
+      window.location.href = 'mailto:alan@amarox.dev?subject=' + subject + '&body=' + body;
     });
   }
 
-  /* ===== Visitor counter ===== */
-  var counterDisplay = document.getElementById('visitorCount');
-  var counterWrapper = document.getElementById('visitorCounter');
-
-  if (counterDisplay && counterWrapper) {
-    var today = new Date().toISOString().slice(0, 10);
-    var lastVisit = localStorage.getItem('lastVisitDate');
-    var count = parseInt(localStorage.getItem('visitorCount'), 10) || 0;
-
-    if (lastVisit !== today) {
-      count += 1;
-      localStorage.setItem('visitorCount', count);
-      localStorage.setItem('lastVisitDate', today);
-      counterWrapper.classList.add('pulse');
-      setTimeout(function () {
-        counterWrapper.classList.remove('pulse');
-      }, 600);
-    }
-
-    counterDisplay.textContent = count.toLocaleString();
-  }
 })();
