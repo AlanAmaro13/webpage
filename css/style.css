@@ -1170,6 +1170,11 @@ img {
     font-size: 2rem;
   }
 
+  /* .section's mobile padding would otherwise tuck the back link under the fixed navbar */
+  .project-detail {
+    padding-top: 6.5rem;
+  }
+
   .project-gallery {
     grid-template-columns: 1fr;
   }

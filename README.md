@@ -4,13 +4,13 @@ Personal portfolio website showcasing my work in AI research, scientific computi
 
 ## Overview
 
-Single-page portfolio with dedicated sub-pages for 7 major projects. Built with plain HTML, CSS, and vanilla JavaScript — no frameworks, no dependencies.
+Single-page portfolio with dedicated sub-pages for 8 major projects. Built with plain HTML, CSS, and vanilla JavaScript — no frameworks, no dependencies.
 
 ### Features
 
 - **Animated starfield background** via HTML5 Canvas with parallax and twinkling effects
 - **Fully responsive** — works on mobile, tablet, and desktop
-- **7 project pages** with detailed descriptions, tech stacks, and image galleries
+- **8 project pages** with detailed descriptions, tech stacks, and image galleries
 - **Contact form** with email integration
 - **Social links** — GitHub, LinkedIn, Instagram
 - **Scroll-reveal animations** for smooth content presentation
@@ -20,6 +20,7 @@ Single-page portfolio with dedicated sub-pages for 7 major projects. Built with 
 
 | Project | Description |
 |---|---|
+| **Simplify** | Zero-configuration kanban task manager (Next.js + Supabase) with Telegram reminders and AI email summaries |
 | **AzoNet** | Deep U-NET for thin-film thickness prediction from transmittance spectra |
 | **QSAR Modeling** | Deep Neural Networks for predicting biological activity of molecules |
 | **Nexus+** | B2B SaaS — AI Assistants for healthcare with RAG pipelines |
@@ -33,11 +34,14 @@ Single-page portfolio with dedicated sub-pages for 7 major projects. Built with 
 ```
 ├── index.html          # Homepage
 ├── css/
-│   └── style.css       # Stylesheet
+│   ├── style.css       # Stylesheet
+│   └── simplify.css    # Simplify page branding (teal accent, board preview)
 ├── js/
 │   └── main.js         # Starfield, scroll reveals, form handling
 ├── images/             # Photos and gallery assets
 └── projects/
+    ├── simplify.html     # Simplify (EN)
+    ├── simplify-es.html  # Simplify (ES)
     ├── azonet.html
     ├── qsar.html
     ├── nexus.html
