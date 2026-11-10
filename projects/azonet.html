@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <title>AzoNet — Coming Soon — Alan Amaro</title>
+  <title>AzoNet — Alan Amaro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
@@ -42,20 +41,222 @@
       </button>
     </nav>
 
-    <section class="section coming-soon reveal">
-      <div class="coming-soon-card">
-        <div class="coming-soon-icon">&#9733;</div>
-        <h1>AzoNet</h1>
-        <p class="coming-soon-subtitle">Thin-Film Thickness Prediction — U-NET</p>
-        <p class="coming-soon-text">
-          This project is currently under review and its details are temporarily unavailable.
-          Please check back soon.
-        </p>
-        <span class="tag tag-gold">Coming Soon</span>
+    <section class="section project-detail reveal">
+      <div class="sp-topbar">
         <a href="../index.html" class="back-link">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
           Back to Home
         </a>
+        <a href="azonet-es.html" class="back-link" hreflang="es" lang="es" aria-label="Ver esta página en español">ES</a>
+      </div>
+
+      <div class="project-header">
+        <div class="institution">Institute of Physics &amp; Materials Research Institute, UNAM</div>
+        <h1>AzoNet — Thin-Film Thickness Prediction</h1>
+        <div class="date">January 2025 — August 2025 &middot; Ciudad Universitaria, Mexico</div>
+        <a class="pub-badge" href="https://doi.org/10.1021/acsomega.6c10558" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 2.1 3.2-.3.7 3.1 2.8 1.6-1.3 2.9 1.3 2.9-2.8 1.6-.7 3.1-3.2-.3L12 22l-2.4-2.1-3.2.3-.7-3.1-2.8-1.6L4.2 12 2.9 9.1l2.8-1.6.7-3.1 3.2.3z"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></svg>
+          <span><strong>Published</strong> &middot; <em>ACS Omega</em> 2026, 11, 69373&#8288;–&#8288;69380&nbsp;&rarr;</span>
+        </a>
+      </div>
+
+      <div class="project-meta">
+        <div class="project-meta-item">
+          <h4>Role</h4>
+          <p>AI Developer — Machine Learning Modeling (6-month freelance contract)</p>
+        </div>
+        <div class="project-meta-item">
+          <h4>Model Type</h4>
+          <p>Convolutional Autoencoder with Skip Connections (U-Net style) + FCNN</p>
+        </div>
+        <div class="project-meta-item">
+          <h4>Performance</h4>
+          <p>MAPE 5.3% &middot; MAE 15.7 nm (synthetic) &middot; MAPE 6.91% &middot; MAE 22.7 nm (145 experimental films)</p>
+        </div>
+      </div>
+
+      <div class="project-authors">
+        <h4>Authors</h4>
+        <p>Víctor Manuel Guerrero-Sosa, Angélica Carrillo-Verduzco, Juan Carlos Alonso-Huitrón, Alan Gabriel Amaro-Colin, Miguel Esquivel-García, Xim Bokhimi</p>
+        <p class="author-affil">Instituto de Investigaciones en Materiales &amp; Instituto de Física, Universidad Nacional Autónoma de México</p>
+      </div>
+
+      <div class="project-body">
+        <h2>Overview</h2>
+        <p>
+          Transparent conductive oxides (TCOs) are wide-bandgap semiconductors that combine high optical transparency with
+          remarkable electrical conductivity, making them essential in LEDs, photovoltaics, flat-panel displays, touch screens,
+          and photodetectors. While indium tin oxide (ITO) dominates commercial applications, its high cost and supply instability
+          have driven the search for alternatives. Aluminum-doped zinc oxide (AZO) has emerged as a promising, cost-effective
+          replacement with comparable optoelectronic performance.
+        </p>
+        <p>
+          Accurate thin-film thickness measurement is critical for device fabrication and performance optimization, yet conventional
+          approaches — interference-fringe analysis or fitting spectra with rigorous optical models — are computationally demanding,
+          sensitive to initial parameters, and time-consuming. AzoNet addresses this gap with a supervised deep learning model that
+          predicts AZO thin-film thickness directly from optical transmittance spectra, providing a rapid, non-destructive, and
+          accurate characterization tool.
+        </p>
+        <p>
+          The model couples a convolutional autoencoder with short skip connections (similar to U-Net) to a fully connected neural
+          network. It was trained on <strong>1.2 million synthetic spectra</strong> generated from a 12-parameter optical model fitted
+          to 145 experimental AZO films (100–1500 nm), using Gaussian Mixture Models to capture parameter distributions across five
+          thickness regions. The model reached a <strong>MAPE of 5.3%</strong> (MAE 15.7 nm) on the synthetic validation set and a
+          <strong>MAPE of 6.91%</strong> (MAE 22.7 nm) on the 145 experimental films. The work was published in
+          <em>ACS Omega</em> (2026) as open access under CC-BY 4.0.
+        </p>
+        <figure class="paper-figure">
+          <img src="../images/azonet/graphical-abstract.png" alt="Transmittance spectra of AZO films of different thicknesses fed into the deep learning model, which outputs a thickness between 100 and 1500 nm" loading="lazy">
+          <figcaption><strong>Graphical abstract.</strong> Optical transmittance spectra go into the deep learning model, which predicts film thickness (100–1500 nm).</figcaption>
+        </figure>
+
+        <h2>Methodology &amp; Architecture</h2>
+
+        <h3>Data Generation</h3>
+        <p>
+          145 AZO thin films (100–1500 nm) were deposited on glass by aerosol-assisted chemical vapor deposition, and their
+          transmittance spectra were measured over 190–1100 nm (911 data points per spectrum at 1 nm resolution). Each spectrum was
+          fitted with the optical transmission theory of Alonso et al. — thickness, absorption coefficient, refractive index
+          (Sellmeier-type dispersion), roughness at both film interfaces, and carrier concentration — optimizing its
+          <strong>12 free parameters</strong> with the <strong>Differential Evolution</strong> algorithm.
+        </p>
+        <p>
+          The fitted parameters were grouped into five thickness regions (100–250, 250–600, 600–950, 950–1100, and 1100–1500 nm).
+          Within each region, Gaussian Mixture Models (GMMs) captured the distribution of every parameter. Sampling from these
+          distributions produced <strong>240,000 synthetic spectra per region</strong> — 1.2 million samples in total — each pairing
+          911 transmittance values (X) with the corresponding film thickness (Y). The shuffled dataset was split 80% training,
+          10% validation, and 10% testing.
+        </p>
+
+        <h3>Deep Learning Architecture</h3>
+        <p>
+          An initial fully connected network (Figure 1) showed poor predictive accuracy: its predictions on the test data deviate
+          substantially from the true thicknesses (Figure 2).
+        </p>
+        <div class="paper-figure-row">
+          <figure class="paper-figure">
+            <img src="../images/azonet/fig1.png" alt="Fully connected network with 911 inputs, hidden layers of 470, 340 and 330 nodes, and one output node" loading="lazy">
+            <figcaption><strong>Figure 1.</strong> Architecture of the initial learning model developed to predict film thickness.</figcaption>
+          </figure>
+          <figure class="paper-figure">
+            <img src="../images/azonet/fig2.png" alt="Scatter plot of inferred versus true thickness for the initial model, with wide scatter around the identity line" loading="lazy">
+            <figcaption><strong>Figure 2.</strong> Predicted vs. actual film thickness for the test data, initial fully connected model.</figcaption>
+          </figure>
+        </div>
+        <p>
+          A convolutional autoencoder with skip connections was therefore added in front of it (Figure 3) to extract richer
+          features from the spectrum:
+        </p>
+        <figure class="paper-figure">
+          <img src="../images/azonet/fig3.png" alt="Block diagram: transmittance spectrum into an autoencoder with skip connections, then a fully connected multilayer network, outputting film thickness" loading="lazy">
+          <figcaption><strong>Figure 3.</strong> Deep learning model developed for the prediction of film thickness.</figcaption>
+        </figure>
+        <ul>
+          <li><strong>Encoder:</strong> Four blocks — convolutional layers with kernel sizes of 150 and 50, Leaky ReLU activation and batch normalization, interleaved with average pooling (pool size and stride 4) for downsampling: 911 → 227 → 56 features.</li>
+          <li><strong>Latent Space:</strong> Two convolutional layers (kernel size 5) producing 84 feature maps with 56 features each.</li>
+          <li><strong>Decoder:</strong> Four blocks with nearest-neighbor upsampling (scale factor 4), restoring resolution (56 → 227 → 911 features). Skip connections concatenate encoder feature maps into the corresponding decoder blocks to recover high-resolution detail; a final 1×1 convolution outputs a single 911-feature map.</li>
+          <li><strong>FCNN:</strong> The 911-element decoder output feeds a fully connected network with three hidden layers (470, 340, and 330 nodes), each followed by dropout (0.35) and batch normalization. A single ReLU output node predicts thickness.</li>
+        </ul>
+        <figure class="paper-figure">
+          <img src="../images/azonet/fig4.png" alt="Encoder blocks: two convolutional layers of 21 maps at 911 features, pooling to 227, two layers of 42 maps, pooling to 56" loading="lazy">
+          <figcaption><strong>Figure 4.</strong> Encoder blocks showing the details of their layer composition.</figcaption>
+        </figure>
+        <figure class="paper-figure paper-figure--narrow">
+          <img src="../images/azonet/fig5.png" alt="Latent space: two convolutional layers of 84 feature maps with 56 features each" loading="lazy">
+          <figcaption><strong>Figure 5.</strong> Generating the latent space.</figcaption>
+        </figure>
+        <figure class="paper-figure">
+          <img src="../images/azonet/fig6.png" alt="Decoder blocks: upsampling from 56 to 227 and 911 features, with encoder feature maps concatenated in, ending in a single 911-feature map" loading="lazy">
+          <figcaption><strong>Figure 6.</strong> Decoder blocks showing details of their layer composition.</figcaption>
+        </figure>
+
+        <h3>Training</h3>
+        <p>
+          The model was implemented in <strong>Keras 3</strong> with a <strong>TensorFlow</strong> backend and trained for
+          <strong>1000 epochs</strong> with the Adam optimizer, MAE loss, a cosine-decaying learning rate starting at 0.0001, and a
+          batch size of 512, on NVIDIA A100 (80 GB) GPUs. Layer sizes, filter counts, and dropout rates come from hyperparameter tuning.
+          Final training and validation MAE were 15.8 nm and 15.7 nm, with a MAPE of 5.3% on both.
+        </p>
+        <figure class="paper-figure paper-figure--narrow">
+          <img src="../images/azonet/fig7.png" alt="Training and validation MAE over 1000 epochs, converging to about 16 nm" loading="lazy">
+          <figcaption><strong>Figure 7.</strong> Loss function value over training epochs.</figcaption>
+        </figure>
+
+        <h3>Results</h3>
+        <p>
+          On the 120,000-sample test set, predictions lie tightly along the identity line (Figure 8), a marked improvement over the
+          fully connected baseline (Figure 2). Applied to the 145 experimental films, the model predicted thickness with a MAPE of
+          6.91% and an MAE of 22.7 nm relative to the thicknesses obtained by fitting their spectra (Figure 9).
+        </p>
+        <div class="paper-figure-row">
+          <figure class="paper-figure">
+            <img src="../images/azonet/fig8.png" alt="Scatter plot of inferred versus true thickness for the deep learning model on test data, tightly along the identity line" loading="lazy">
+            <figcaption><strong>Figure 8.</strong> Predicted vs. actual film thickness for the test data, deep learning model.</figcaption>
+          </figure>
+          <figure class="paper-figure">
+            <img src="../images/azonet/fig9.png" alt="Scatter plot of predicted versus experimental thickness for the 145 real AZO films" loading="lazy">
+            <figcaption><strong>Figure 9.</strong> Predicted vs. experimental film thicknesses for the 145 AZO films.</figcaption>
+          </figure>
+        </div>
+        <p class="paper-figure-credit">
+          Figures reproduced from Guerrero-Sosa et al., <em>ACS Omega</em> 2026, 11, 69373–69380,
+          <a href="https://doi.org/10.1021/acsomega.6c10558" target="_blank" rel="noopener">doi:10.1021/acsomega.6c10558</a>, under CC-BY 4.0.
+        </p>
+
+        <h2>Key Achievements</h2>
+        <ul>
+          <li>Generated <strong>1.2 million synthetic samples</strong> from Gaussian Mixture Model distributions across five thickness regions, capturing realistic parameter variability from 145 experimental AZO films.</li>
+          <li>Applied global optimization (<strong>Differential Evolution</strong>) to fit a 12-parameter optical model to experimental transmittance spectra, extracting physically meaningful parameters for data synthesis.</li>
+          <li>Substantially outperformed a baseline fully connected network by adding a <strong>convolutional autoencoder with skip connections</strong> for feature extraction.</li>
+          <li>Achieved <strong>MAPE of 5.3%</strong> on synthetic data and <strong>MAPE of 6.91%</strong> (MAE 22.7 nm) on 145 experimental films.</li>
+          <li>Developed a <strong>standalone executable with a user-friendly GUI</strong> (TTK Bootstrap) for deploying and visualizing predictions, making the tool accessible to laboratory staff.</li>
+          <li>Disseminated findings at the <strong>Congreso Nacional de Física 2025</strong> in Mexico.</li>
+          <li>Published as <strong>"A Deep Learning Approach for Thickness Determination of AZO Thin Films"</strong> in <em>ACS Omega</em> 2026, 11, 69373–69380.</li>
+        </ul>
+
+        <div class="project-tags">
+          <span class="tag">U-NET</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">Keras 3</span>
+          <span class="tag tag-gold">Synthetic Data (1.2M samples)</span>
+          <span class="tag">Gaussian Mixture Models</span>
+          <span class="tag">Differential Evolution</span>
+          <span class="tag">Autoencoder</span>
+          <span class="tag">Skip Connections</span>
+          <span class="tag">Leaky ReLU</span>
+          <span class="tag">Batch Normalization</span>
+          <span class="tag">TTKBootstrap</span>
+          <span class="tag">Tkinter GUI</span>
+          <span class="tag">Non-linear Curve Fitting</span>
+          <span class="tag tag-gold">ACS Omega</span>
+          <span class="tag">Scientific Computing</span>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 2.5rem;">Resources</h2>
+      <div class="project-links">
+        <div class="project-link-item">
+          <h4>Paper — ACS Omega</h4>
+          <p>Guerrero-Sosa, V. M.; Carrillo-Verduzco, A.; Alonso-Huitrón, J. C.; Amaro-Colin, A. G.; Esquivel-García, M.; Bokhimi, X. "A Deep Learning Approach for Thickness Determination of AZO Thin Films." <em>ACS Omega</em> 2026, 11, 69373–69380. Open access (CC-BY 4.0).</p>
+          <a href="https://doi.org/10.1021/acsomega.6c10558" target="_blank" rel="noopener">Read the Paper &rarr;</a>
+        </div>
+        <div class="project-link-item">
+          <h4>Use Azo-Net — Google Colaboratory</h4>
+          <p>Interactive notebook to test the AzoNet model. Downloads the model, background data, and a test sample. Presents a plot of the spectrum and normalized spectrum, runs predictions using Keras, and compares the predicted thickness against the original sample.</p>
+          <a href="https://drive.google.com/file/d/1GrzHIK72-Ef4cB6Rb5x1xiAb0j33JjTJ/view?usp=sharing" target="_blank" rel="noopener">Open Notebook &rarr;</a>
+        </div>
+        <div class="project-link-item">
+          <h4>Differential Evolution — Google Colaboratory</h4>
+          <p>Notebook for fitting experimental transmittance spectra using Alonso's theoretical model via the Differential Evolution algorithm. Requires a transmittance spectrum sample and an initial thickness guess with uncertainty. Returns optimized parameters: thickness, roughness, Sellmeier coefficients, absorption values, and carrier density.</p>
+          <a href="https://drive.google.com/file/d/15EbgNeVvbOfmeEGj0bpYkEV0Z7w-XsVT/view?usp=drive_link" target="_blank" rel="noopener">Open Notebook &rarr;</a>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 2.5rem;">Gallery</h2>
+      <div class="project-gallery">
+        <img src="../images/national_congress_physics/picture_with_my_poster.jpeg" alt="AzoNet Poster at National Physics Congress">
+        <img src="../images/national_congress_physics/picture_with_a_friend.jpeg" alt="At the Congress">
+        <img src="../images/national_congress_physics/picture_with_friends.jpeg" alt="With colleagues">
       </div>
     </section>
 

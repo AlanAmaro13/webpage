@@ -290,18 +290,6 @@
   color: var(--text-muted);
 }
 
-.sp-topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.sp-topbar .back-link {
-  margin-bottom: 0;
-}
-
 .sp-actions {
   display: flex;
   flex-wrap: wrap;

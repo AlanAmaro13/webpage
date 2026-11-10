@@ -23,7 +23,7 @@ Single-page portfolio with dedicated sub-pages for 10 major projects. Built with
 | **Simplify** | Zero-configuration kanban task manager (Next.js + Supabase) with Telegram reminders and AI email summaries |
 | **Unified** | Personal life dashboard (finance, investments, nutrition, sleep, water, gym, goals) with DeepSeek AI coaching (Next.js + Supabase) |
 | **Nova** | AI language-learning platform: leveled readings in English, Italian, German and Korean with vocabulary help, quizzes, an AI tutor and flash cards (Next.js + Supabase + DeepSeek) |
-| **AzoNet** | Deep U-NET for thin-film thickness prediction from transmittance spectra |
+| **AzoNet** | Deep U-NET for AZO thin-film thickness prediction from transmittance spectra — published in [ACS Omega (2026)](https://doi.org/10.1021/acsomega.6c10558) |
 | **QSAR Modeling** | Deep Neural Networks for predicting biological activity of molecules |
 | **Nexus+** | B2B SaaS — AI Assistants for healthcare with RAG pipelines |
 | **Paleo-Net** | 3D Convolutional U-NET for fossil reconstruction |
@@ -50,7 +50,8 @@ Single-page portfolio with dedicated sub-pages for 10 major projects. Built with
     ├── unified-es.html   # Unified (ES)
     ├── nova.html         # Nova (EN)
     ├── nova-es.html      # Nova (ES)
-    ├── azonet.html
+    ├── azonet.html       # AzoNet (EN)
+    ├── azonet-es.html    # AzoNet (ES)
     ├── qsar.html
     ├── nexus.html
     ├── paleonet.html
