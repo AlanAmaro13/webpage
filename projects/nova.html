@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova — Alan Amaro</title>
+  <meta name="description" content="Nova: an AI language-learning platform that writes readings at your MCER level in English, Italian, German or Korean, with tap-a-word vocabulary, quizzes, an AI tutor and flash cards. Built by Alan Amaro with Next.js, Supabase and DeepSeek.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/simplify.css">
+  <link rel="stylesheet" href="../css/unified.css">
+  <link rel="stylesheet" href="../css/nova.css">
+  <link rel="alternate" hreflang="en" href="nova.html">
+  <link rel="alternate" hreflang="es" href="nova-es.html">
+</head>
+<body class="brand-nova">
+  <div class="content-wrapper">
+
+    <nav class="navbar">
+      <a href="../index.html" class="nav-logo">Alan<span>Amaro</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-social">
+        <a href="https://github.com/AlanAmaro13" target="_blank" rel="noopener" title="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/alanamaro/" target="_blank" rel="noopener" title="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/todo.es.relativo13/" target="_blank" rel="noopener" title="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode" title="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <section class="section project-detail reveal">
+      <div class="sp-topbar">
+        <a href="../index.html" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back to Home
+        </a>
+        <a href="nova-es.html" class="back-link" hreflang="es" lang="es" aria-label="Ver esta página en español">ES</a>
+      </div>
+
+      <div class="project-header">
+        <div class="sp-logo">
+          <span class="sp-logo-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+          </span>
+          Nova
+        </div>
+        <h1>Learn any language, <span class="sp-accent">one reading at a time.</span></h1>
+        <div class="date">July 2026 — Present &middot; Personal product &middot; Live, invite-only</div>
+        <div class="sp-actions">
+            <a class="sp-btn" href="https://read.amarox.dev/" target="_blank" rel="noopener">Open Nova &#8599;</a>
+            <a class="sp-btn sp-btn-secondary" href="mailto:alan@amarox.dev?subject=Nova%20account%20request&amp;body=Hi%20Alan%2C%0A%0AI%27d%20like%20to%20request%20a%20Nova%20account.%0A%0AName%3A%0AEmail%20I%27ll%20use%20to%20sign%20in%3A%0ALanguage%20I%20want%20to%20learn%3A%0A%0AThanks%21">Request an account</a>
+          </div>
+      </div>
+
+      <div class="project-meta">
+        <div class="project-meta-item">
+          <h4>Role</h4>
+          <p>Creator &amp; Full-Stack Developer</p>
+        </div>
+        <div class="project-meta-item">
+          <h4>Type</h4>
+          <p>AI Language-Learning Platform</p>
+        </div>
+        <div class="project-meta-item">
+          <h4>Platforms</h4>
+          <p>Desktop &amp; Mobile Web</p>
+        </div>
+        <div class="project-meta-item">
+          <h4>Study languages</h4>
+          <p>English, Italian, German &amp; Korean</p>
+        </div>
+      </div>
+
+      <div class="project-body">
+        <h2>Overview</h2>
+        <p>
+          Nova is a reading-first way to learn a language. You pick what you are studying, your MCER level (A1 to C2) and a topic, and Nova writes a brand-new passage just for you, at the right difficulty and length, with the words worth learning already highlighted.
+        </p>
+        <p>
+          Everything you need to understand the text sits next to it: tap a word for its meaning, ask the AI tutor about any sentence, translate on the fly, then check yourself with a quiz. Words you save come back in flash cards and in your next readings, so they stick.
+        </p>
+
+        <div class="sp-preview" role="img" aria-label="Preview of a Nova reading: level, length and quiz stats, a passage with highlighted vocabulary and a word definition">
+          <div class="sp-kpis" aria-hidden="true">
+            <div class="sp-kpi"><strong>B1</strong><span>Level</span></div><div class="sp-kpi"><strong>240</strong><span>Words</span></div><div class="sp-kpi"><strong>8</strong><span>Key words</span></div><div class="sp-kpi"><strong>5</strong><span>Questions</span></div><div class="sp-kpi"><strong>4</strong><span>Languages</span></div>
+          </div>
+          <div class="nv-reading" aria-hidden="true" lang="en">
+            <h3>A morning at the market</h3>
+            <p>Every Saturday, Lucía walks to the <span class="nv-word">bustling</span> market near her flat. She <span class="nv-word">haggles</span> over the price of tomatoes, chats with the baker, and always leaves with more than she <span class="nv-word">intended</span> to buy.</p>
+            <div class="nv-tip"><strong>bustling</strong> · adjective · <em>bullicioso</em> — full of busy, noisy activity. “The bustling streets of the old town.”</div>
+          </div>
+        </div>
+
+        <h2>What you get</h2>
+        <ul class="sp-features un-features">
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg></span><h3>Leveled readings</h3><p>Fresh AI-written passages on any topic, matched to your MCER level. Choose short, medium or large, or pick from daily topic suggestions.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span><h3>Tap-a-word vocabulary</h3><p>Key words are highlighted in every reading. Tap one to see its definition, part of speech, translation and an example sentence.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span><h3>Comprehension quizzes</h3><p>Check what you understood with 5, 10 or 15 questions per reading. See your score and retry as often as you like.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><h3>AI Tutor</h3><p>A draggable chat panel next to the reading. Ask about grammar, idioms or any sentence, and the tutor answers with the passage in mind.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg></span><h3>Built-in translator</h3><p>Translate words both ways between your study language and Spanish without leaving the page, then save them in one click.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg></span><h3>Your vocabulary list</h3><p>Every saved word lands in a searchable list that updates live. Opt in, and Nova weaves those words into your next readings.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><h3>Flash cards</h3><p>Review your saved words with 3D flip cards. Shuffle the deck and practice until you know each one.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12A10 10 0 1 1 2 12a10 10 0 0 1 20 0z"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></span><h3>Open questions</h3><p>Ask anything about the language, outside any reading, and get clear plain-text answers. Your history is kept for later.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12A10 10 0 1 1 2 12a10 10 0 0 1 20 0z"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span><h3>Four languages</h3><p>Study English, Italian, German or Korean, and switch any time from your dashboard. Readings and words are kept per language.</p></li>
+        </ul>
+
+        <h2>How It Works</h2>
+        <ol class="sp-steps">
+          <li><span class="sp-step-num" aria-hidden="true">1</span><h3>Request an account</h3><p>Nova is invite-only. Send a request and your account is created for you.</p></li>
+          <li><span class="sp-step-num" aria-hidden="true">2</span><h3>Pick a language and level</h3><p>Sign in, choose what you are learning and your MCER level, from A1 to C2.</p></li>
+          <li><span class="sp-step-num" aria-hidden="true">3</span><h3>Read, tap, quiz, review</h3><p>Generate a reading, look up words as you go, take the quiz and review your saved words.</p></li>
+        </ol>
+
+        <h2>Under the Hood</h2>
+        <ul>
+          <li><strong>Next.js 16 (App Router) + React 19 + TypeScript</strong>: a shared <code>(app)</code> route group for the signed-in pages, API routes for every AI call, and the <code>proxy.ts</code> convention guarding private routes.</li>
+          <li><strong>Supabase Auth + PostgreSQL</strong> with <strong>Row-Level Security</strong> on every table, idempotent migrations, and <strong>Realtime</strong> so the saved-vocabulary panel updates live.</li>
+          <li><strong>DeepSeek</strong> generates readings, vocabulary, quizzes, daily topic ideas, tutor answers and translations, with language-aware prompts for each study language.</li>
+          <li><strong>Draggable floating panels</strong> (Translate, Vocabulary, AI Tutor) built on a small Pointer Events hook with GPU-accelerated movement and viewport clamping.</li>
+          <li><strong>AI-native design system</strong> in Tailwind CSS v4: dark-first, royal blue + violet, a twinkling starfield in dark mode, and a hydration-safe theme toggle.</li>
+          <li><strong>English and Spanish</strong> sign-in page that doubles as a product tour for new users.</li>
+        </ul>
+
+        <div class="project-tags">
+          <span class="tag">Next.js 16</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">React 19</span>
+          <span class="tag">Tailwind CSS v4</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">PostgreSQL + RLS</span>
+          <span class="tag">Supabase Realtime</span>
+          <span class="tag">DeepSeek API</span>
+          <span class="tag tag-gold">AI Tutor</span>
+        </div>
+
+        <div class="sp-cta">
+          <p>Want to try Nova?</p>
+          <div class="sp-actions sp-actions-center">
+            <a class="sp-btn" href="https://read.amarox.dev/" target="_blank" rel="noopener">Open Nova &#8599;</a>
+            <a class="sp-btn sp-btn-secondary" href="mailto:alan@amarox.dev?subject=Nova%20account%20request&amp;body=Hi%20Alan%2C%0A%0AI%27d%20like%20to%20request%20a%20Nova%20account.%0A%0AName%3A%0AEmail%20I%27ll%20use%20to%20sign%20in%3A%0ALanguage%20I%20want%20to%20learn%3A%0A%0AThanks%21">Request an account</a>
+          </div>
+          <p class="sp-hint">Nova is invite-only: “Request an account” opens your email app with the request pre-filled.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-social">
+        <a href="https://github.com/AlanAmaro13" target="_blank" rel="noopener" title="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/alanamaro/" target="_blank" rel="noopener" title="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/todo.es.relativo13/" target="_blank" rel="noopener" title="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Alan Amaro. All rights reserved.</p>
+    </footer>
+
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+</html>

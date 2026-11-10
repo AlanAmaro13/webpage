@@ -4,13 +4,13 @@ Personal portfolio website showcasing my work in AI research, scientific computi
 
 ## Overview
 
-Single-page portfolio with dedicated sub-pages for 9 major projects. Built with plain HTML, CSS, and vanilla JavaScript — no frameworks, no dependencies.
+Single-page portfolio with dedicated sub-pages for 10 major projects. Built with plain HTML, CSS, and vanilla JavaScript — no frameworks, no dependencies.
 
 ### Features
 
 - **Animated starfield background** via HTML5 Canvas with parallax and twinkling effects
 - **Fully responsive** — works on mobile, tablet, and desktop
-- **9 project pages** with detailed descriptions, tech stacks, and image galleries
+- **10 project pages** with detailed descriptions, tech stacks, and image galleries
 - **Contact form** with email integration
 - **Social links** — GitHub, LinkedIn, Instagram
 - **Scroll-reveal animations** for smooth content presentation
@@ -22,6 +22,7 @@ Single-page portfolio with dedicated sub-pages for 9 major projects. Built with 
 |---|---|
 | **Simplify** | Zero-configuration kanban task manager (Next.js + Supabase) with Telegram reminders and AI email summaries |
 | **Unified** | Personal life dashboard (finance, investments, nutrition, sleep, water, gym, goals) with DeepSeek AI coaching (Next.js + Supabase) |
+| **Nova** | AI language-learning platform: leveled readings in English, Italian, German and Korean with vocabulary help, quizzes, an AI tutor and flash cards (Next.js + Supabase + DeepSeek) |
 | **AzoNet** | Deep U-NET for thin-film thickness prediction from transmittance spectra |
 | **QSAR Modeling** | Deep Neural Networks for predicting biological activity of molecules |
 | **Nexus+** | B2B SaaS — AI Assistants for healthcare with RAG pipelines |
@@ -37,7 +38,8 @@ Single-page portfolio with dedicated sub-pages for 9 major projects. Built with 
 ├── css/
 │   ├── style.css       # Stylesheet
 │   ├── simplify.css    # Simplify page branding (teal accent, board preview)
-│   └── unified.css     # Unified page branding (royal blue, module tiles; reuses sp-* layout)
+│   ├── unified.css     # Unified page branding (royal blue, module tiles; reuses sp-* layout)
+│   └── nova.css        # Nova page branding (royal blue + violet, sample reading; reuses sp-*/un-* layout)
 ├── js/
 │   └── main.js         # Starfield, scroll reveals, form handling
 ├── images/             # Photos and gallery assets
@@ -46,6 +48,8 @@ Single-page portfolio with dedicated sub-pages for 9 major projects. Built with 
     ├── simplify-es.html  # Simplify (ES)
     ├── unified.html      # Unified (EN)
     ├── unified-es.html   # Unified (ES)
+    ├── nova.html         # Nova (EN)
+    ├── nova-es.html      # Nova (ES)
     ├── azonet.html
     ├── qsar.html
     ├── nexus.html
