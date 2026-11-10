@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Unified project page — reuses the Simplify page layout (sp-* classes) and
+   swaps in Unified's royal-blue branding. Light/dark themes keep working.
+   ========================================================================== */
+
+.brand-unified {
+  --accent: #2e4fc4;
+  --accent-soft: rgba(65, 105, 225, 0.16);
+  --mint: #24409f; /* secondary-button hover text */
+}
+
+[data-theme='dark'] .brand-unified {
+  --accent: #8aa6f5;
+  --accent-soft: rgba(138, 166, 245, 0.16);
+  --mint: #b4c6f8;
+}
+
+/* Simplify hard-codes its teal on these; Unified uses royal blue */
+.brand-unified .sp-logo-mark,
+.brand-unified .sp-step-num,
+.brand-unified .sp-btn:not(.sp-btn-secondary),
+.sp-logo-mark.un-mark {
+  background: #4169e1;
+}
+
+.brand-unified .sp-btn:not(.sp-btn-secondary):hover {
+  background: #2e4fc4;
+}
+
+.brand-unified .sp-btn:focus-visible {
+  outline-color: #7e96d8;
+}
+
+/* Module icon (preview tiles + feature cards) */
+.un-ic {
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #4169e1;
+  box-shadow: var(--shadow-raised-sm);
+}
+
+/* Preview: the nine modules under the KPI strip */
+.un-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.un-tile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 0.85rem;
+  border-radius: var(--radius-md, 14px);
+  background: var(--bg);
+  box-shadow: var(--shadow-raised-sm);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.project-body .un-features .un-ic {
+  margin-bottom: 0.85rem;
+}
+
+/* nine modules read best as a 3×3 grid */
+.project-body ul.un-features {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+}
