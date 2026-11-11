@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unified — Alan Amaro (Español)</title>
+  <meta name="description" content="Unified: un hub personal para finanzas, nutrición, sueño, hidratación, gym y metas, con un coach de IA. Creado por Alan Amaro con Next.js, Supabase y DeepSeek.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/simplify.css">
+  <link rel="stylesheet" href="../css/unified.css">
+  <link rel="alternate" hreflang="en" href="unified.html">
+  <link rel="alternate" hreflang="es" href="unified-es.html">
+</head>
+<body class="brand-unified">
+  <div class="content-wrapper">
+
+    <nav class="navbar">
+      <a href="../index.html" class="nav-logo">Alan<span>Amaro</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about">Sobre mí</a></li>
+        <li><a href="../index.html#projects">Proyectos</a></li>
+        <li><a href="../index.html#contact">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-social">
+        <a href="https://github.com/AlanAmaro13" target="_blank" rel="noopener" title="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/alanamaro/" target="_blank" rel="noopener" title="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/todo.es.relativo13/" target="_blank" rel="noopener" title="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar entre modo claro y oscuro" title="Cambiar tema">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir navegación">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <section class="section project-detail reveal">
+      <div class="sp-topbar">
+        <a href="../index.html" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Volver al inicio
+        </a>
+        <a href="unified.html" class="back-link" hreflang="en" lang="en" aria-label="View this page in English">EN</a>
+      </div>
+
+      <div class="project-header">
+        <div class="sp-logo">
+          <span class="sp-logo-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-7"/><path d="M12 14c0-5 3-8 8-8-1 5-4 8-8 8z"/><path d="M12 14c-1-4-3-6-6-7 2 4 4 6 6 7z"/></svg>
+          </span>
+          Unified
+        </div>
+        <h1>Toda tu vida, <span class="sp-accent">unificada.</span></h1>
+        <div class="date">Septiembre 2026 — Presente &middot; Producto personal &middot; En línea, solo con invitación</div>
+        <div class="sp-actions">
+          <a class="sp-btn" href="https://unified.amarox.dev/" target="_blank" rel="noopener">Abrir Unified &#8599;</a>
+          <a class="sp-btn sp-btn-secondary" href="mailto:alan@amarox.dev?subject=Solicitud%20de%20cuenta%20en%20Unified&amp;body=Hola%20Alan%2C%0A%0AMe%20gustar%C3%ADa%20solicitar%20una%20cuenta%20en%20Unified.%0A%0ANombre%3A%0ACorreo%20con%20el%20que%20iniciar%C3%A9%20sesi%C3%B3n%3A%0A%0A%C2%A1Gracias%21">Solicitar una cuenta</a>
+        </div>
+      </div>
+
+      <div class="project-meta">
+        <div class="project-meta-item">
+          <h4>Rol</h4>
+          <p>Creador y desarrollador full-stack</p>
+        </div>
+        <div class="project-meta-item">
+          <h4>Tipo</h4>
+          <p>Panel personal de vida diaria</p>
+        </div>
+        <div class="project-meta-item">
+          <h4>Plataformas</h4>
+          <p>Web en escritorio y celular</p>
+        </div>
+        <div class="project-meta-item">
+          <h4>Idiomas</h4>
+          <p>Español e inglés</p>
+        </div>
+      </div>
+
+      <div class="project-body">
+        <h2>Descripción general</h2>
+        <p>
+          Unified es un hub personal que junta en un solo panel tranquilo las herramientas que antes tenía en apps separadas: dinero, inversiones, comidas, sueño, agua, gym, metas y un calendario. Cada módulo funciona por sí solo y alimenta una sola vista de <strong>Hoy</strong>, para que el panorama completo esté a un vistazo.
+        </p>
+        <p>
+          La IA hace la parte tediosa: describe una comida con tus palabras y estima su nutrición, pregúntale al coach del gym qué hacer en tu siguiente serie, o deja que divida una meta grande en hitos semanales.
+        </p>
+
+        <div class="sp-preview" role="img" aria-label="Vista previa de Hoy en Unified: estadísticas de resumen y los nueve módulos">
+          <div class="sp-kpis" aria-hidden="true">
+            <div class="sp-kpi"><strong>1,640</strong><span>kcal</span></div>
+            <div class="sp-kpi"><strong>1.8 L</strong><span>Agua</span></div>
+            <div class="sp-kpi"><strong>7.2 h</strong><span>Sueño</span></div>
+            <div class="sp-kpi"><strong>$4,250</strong><span>Presupuesto</span></div>
+            <div class="sp-kpi"><strong>18</strong><span>Series</span></div>
+          </div>
+          <div class="un-tiles" aria-hidden="true">
+            <div class="un-tile"><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg></span><span>Hoy</span></div>
+            <div class="un-tile"><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 9h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg></span><span>Calendario</span></div>
+            <div class="un-tile"><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1"/><path d="M3 9h18"/><path d="M16 14h4"/></svg></span><span>Finanzas</span></div>
+            <div class="un-tile"><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 3l9 6.5"/><path d="M4 10v9h16v-9"/><path d="M10 19v-5h4v5"/></svg></span><span>Inversiones</span></div>
+            <div class="un-tile"><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5c-1.5-1-3.5-.5-4.5 1-1 1.6-1 3.6-.4 5 .3.6.6 1.2 1 1.7 1 1.8 2.4 2.8 3.9 2.8s2.9-1 3.9-2.8c.4-.5.7-1.1 1-1.7.6-1.4.6-3.4-.4-5-1-1.5-3-2-4.5-1z"/><path d="M12 5c0-2 1-3 2.5-3.5"/></svg></span><span>Saludable</span></div>
+            <div class="un-tile"><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span><span>Sueño</span></div>
+            <div class="un-tile"><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6 6 10a6 6 0 0 1-12 0c0-4 6-10 6-10z"/></svg></span><span>Agua</span></div>
+            <div class="un-tile"><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6"/><path d="M7 7v10"/><path d="M17 7v10"/><path d="M20 9v6"/><path d="M7 12h10"/></svg></span><span>Gym</span></div>
+            <div class="un-tile"><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><span>Metas</span></div>
+          </div>
+        </div>
+
+        <h2>Lo que obtienes, sección por sección</h2>
+        <ul class="sp-features un-features">
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg></span><h3>Hoy</h3><p>Tarjetas de resumen de calorías, agua, sueño, presupuesto restante, metas y gym, lo más destacado de la revisión semanal del coach de IA, accesos rápidos y un navegador para registrar cualquier día pasado.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 9h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg></span><h3>Calendario</h3><p>Un mes que empieza en lunes y una vista del día hora por hora donde cada evento ocupa su duración real. Crea, edita y borra eventos con color, descripción o de todo el día.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1"/><path d="M3 9h18"/><path d="M16 14h4"/></svg></span><h3>Finanzas</h3><p>Quincenas con ingresos, gastos, ahorro planeado y lo que te queda; dona por categoría, historial de 12 meses y gráficas de tendencia; filtros, plantillas de gastos fijos, control de ahorros, un botón para ocultar montos y bloqueo opcional con PIN.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 3l9 6.5"/><path d="M4 10v9h16v-9"/><path d="M10 19v-5h4v5"/></svg></span><h3>Inversiones</h3><p>Registra cada cuenta con banco, tasa anual, impuesto y monto; ve en vivo tu ganancia neta mensual y totales de dinero invertido, ganancia mensual y anual. Protegido con el mismo PIN.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5c-1.5-1-3.5-.5-4.5 1-1 1.6-1 3.6-.4 5 .3.6.6 1.2 1 1.7 1 1.8 2.4 2.8 3.9 2.8s2.9-1 3.9-2.8c.4-.5.7-1.1 1-1.7.6-1.4.6-3.4-.4-5-1-1.5-3-2-4.5-1z"/><path d="M12 5c0-2 1-3 2.5-3.5"/></svg></span><h3>Saludable</h3><p>Escribe lo que comiste con tus palabras; la IA lo separa en alimentos y estima calorías, proteína, carbohidratos, grasa, azúcar, fibra y sodio. Revisa todo antes de guardar y recibe alertas y sugerencias de comidas para completar tu día.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span><h3>Sueño</h3><p>Registra hora de dormir, de despertar y una calidad del 1 al 5, sigue tus promedios semanales y una gráfica de cada noche, y edita cualquier registro.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6 6 10a6 6 0 0 1-12 0c0-4 6-10 6-10z"/></svg></span><h3>Agua</h3><p>Registra bebidas por tipo y cantidad (agua, café, té, leche, refresco y más) contra una meta diaria, con un aviso cuando vas atrasado.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6"/><path d="M7 7v10"/><path d="M17 7v10"/><path d="M20 9v6"/><path d="M7 12h10"/></svg></span><h3>Gym</h3><p>Ejercicios en orden con series de aproximación, efectivas y drop (peso, repeticiones, RIR), una línea de “la última vez”, cronómetro de descanso por serie, cardio con calorías estimadas por IA, gráficas de progreso de 12 semanas y un coach de IA cuyo chat se guarda por día.</p></li>
+          <li><span class="un-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><h3>Metas</h3><p>Metas con fecha objetivo y métrica opcional, seguimiento de progreso y estado, y una IA que divide las metas grandes en hitos semanales que aparecen en Hoy.</p></li>
+        </ul>
+
+        <h2>Cómo funciona</h2>
+        <ol class="sp-steps">
+          <li><span class="sp-step-num" aria-hidden="true">1</span><h3>Solicita una cuenta</h3><p>Unified es solo con invitación. Envía una solicitud y tu cuenta se crea por ti.</p></li>
+          <li><span class="sp-step-num" aria-hidden="true">2</span><h3>Inicia sesión</h3><p>En español o inglés. Todos los módulos están listos desde el primer día.</p></li>
+          <li><span class="sp-step-num" aria-hidden="true">3</span><h3>Registra tu día</h3><p>Agrega una comida, un vaso de agua o una serie del gym en segundos y mira cómo se llena Hoy.</p></li>
+        </ol>
+
+        <h2>Bajo el capó</h2>
+        <ul>
+          <li><strong>Next.js 16 (App Router) + React 19 + TypeScript</strong>: los server components cargan cada módulo, las server actions guardan los cambios y la convención <code>proxy.ts</code> protege las rutas privadas.</li>
+          <li><strong>Supabase Auth + PostgreSQL</strong> con <strong>Row-Level Security</strong>; además, cada actualización y borrado se limita al usuario en sesión desde el servidor.</li>
+          <li><strong>DeepSeek</strong> para analizar comidas, sugerir comidas, dividir metas, el coach del gym y la revisión semanal. Cada respuesta de la IA es JSON validado con <strong>Zod</strong> y se reintenta una vez si falla.</li>
+          <li><strong>Chart.js</strong> envuelto en un pequeño componente cliente para las gráficas de finanzas, sueño y progreso de fuerza.</li>
+          <li><strong>Fechas con zona horaria</strong>: cada módulo por día agrupa los registros por el día local, no por el reloj UTC del servidor.</li>
+          <li><strong>Sistema de diseño neumórfico propio</strong> en azul rey (Lora + Raleway), con una revisión móvil hecha en Playwright desde celulares de 320px hasta escritorio.</li>
+          <li>Pruebas unitarias con <strong>Vitest</strong> para fechas, agregados de finanzas, inversiones, cardio y progreso del gym.</li>
+        </ul>
+
+        <div class="project-tags">
+          <span class="tag">Next.js 16</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">React 19</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">PostgreSQL + RLS</span>
+          <span class="tag">DeepSeek API</span>
+          <span class="tag">Zod</span>
+          <span class="tag">Chart.js</span>
+          <span class="tag">Vitest</span>
+          <span class="tag tag-gold">Coach de IA</span>
+        </div>
+
+        <div class="sp-cta">
+          <p>¿Quieres probar Unified?</p>
+          <div class="sp-actions sp-actions-center">
+            <a class="sp-btn" href="https://unified.amarox.dev/" target="_blank" rel="noopener">Abrir Unified &#8599;</a>
+            <a class="sp-btn sp-btn-secondary" href="mailto:alan@amarox.dev?subject=Solicitud%20de%20cuenta%20en%20Unified&amp;body=Hola%20Alan%2C%0A%0AMe%20gustar%C3%ADa%20solicitar%20una%20cuenta%20en%20Unified.%0A%0ANombre%3A%0ACorreo%20con%20el%20que%20iniciar%C3%A9%20sesi%C3%B3n%3A%0A%0A%C2%A1Gracias%21">Solicitar una cuenta</a>
+          </div>
+          <p class="sp-hint">Unified es solo con invitación: “Solicitar una cuenta” abre tu app de correo con la solicitud ya escrita.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-social">
+        <a href="https://github.com/AlanAmaro13" target="_blank" rel="noopener" title="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/alanamaro/" target="_blank" rel="noopener" title="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/todo.es.relativo13/" target="_blank" rel="noopener" title="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Alan Amaro. Todos los derechos reservados.</p>
+    </footer>
+
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+</html>

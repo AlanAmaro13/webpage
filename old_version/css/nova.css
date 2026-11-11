@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Nova project page — reuses the Simplify layout (sp-*) and Unified's icon
+   tiles (un-*), with Nova's royal-blue + violet branding. Light/dark themes
+   keep working.
+   ========================================================================== */
+
+.brand-nova {
+  --accent: #6d28d9;
+  --accent-soft: rgba(124, 58, 237, 0.14);
+  --mint: #5b21b6; /* secondary-button hover text */
+}
+
+[data-theme='dark'] .brand-nova {
+  --accent: #a78bfa;
+  --accent-soft: rgba(167, 139, 250, 0.16);
+  --mint: #c4b5fd;
+}
+
+/* Nova's primary is royal blue; the accent text stays violet */
+.brand-nova .sp-logo-mark,
+.brand-nova .sp-step-num,
+.brand-nova .sp-btn:not(.sp-btn-secondary),
+.brand-nova .un-ic,
+.sp-logo-mark.nv-mark {
+  background: #1d4ed8;
+}
+
+.brand-nova .sp-btn:not(.sp-btn-secondary):hover {
+  background: #1e40af;
+}
+
+.brand-nova .sp-btn:focus-visible {
+  outline-color: #60a5fa;
+}
+
+/* Preview: a sample reading with tappable vocabulary */
+.nv-reading {
+  margin-top: 1rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--radius-md, 14px);
+  background: var(--bg);
+  box-shadow: var(--shadow-raised-sm);
+  color: var(--text);
+}
+
+.nv-reading h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.nv-reading p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.nv-word {
+  padding: 0 0.2em;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.nv-tip {
+  margin-top: 0.9rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 12px;
+  border-left: 3px solid #1d4ed8;
+  background: var(--accent-soft);
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.nv-tip strong {
+  color: var(--accent);
+}
+
+.project-body .un-features .un-ic {
+  margin-bottom: 0.85rem;
+}
+
+.project-body ul.un-features {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+}

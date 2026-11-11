@@ -8,7 +8,7 @@
   function getPreferredTheme() {
     var saved = localStorage.getItem('theme');
     if (saved === 'light' || saved === 'dark') return saved;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return 'dark'; // AmaroX: powder black is the default surface
   }
 
   function applyTheme(theme) {
@@ -68,9 +68,10 @@
       var email = (document.getElementById('email') || {}).value || '';
       var message = (document.getElementById('message') || {}).value || '';
 
-      var subject = encodeURIComponent('Portfolio contact from ' + name);
+      var es = document.documentElement.lang === 'es';
+      var subject = encodeURIComponent((es ? 'Contacto desde el portafolio: ' : 'Portfolio contact from ') + name);
       var body = encodeURIComponent(
-        'Name: ' + name + '\nEmail: ' + email + '\n\n' + message
+        (es ? 'Nombre: ' : 'Name: ') + name + (es ? '\nCorreo: ' : '\nEmail: ') + email + '\n\n' + message
       );
 
       window.location.href = 'mailto:alan@amarox.dev?subject=' + subject + '&body=' + body;

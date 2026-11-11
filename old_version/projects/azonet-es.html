@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AzoNet — Alan Amaro (Español)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="content-wrapper">
+
+    <nav class="navbar">
+      <a href="../index.html" class="nav-logo">Alan<span>Amaro</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about">Sobre mí</a></li>
+        <li><a href="../index.html#projects">Proyectos</a></li>
+        <li><a href="../index.html#contact">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-social">
+          <a href="https://github.com/AlanAmaro13" target="_blank" rel="noopener" title="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/alanamaro/" target="_blank" rel="noopener" title="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/todo.es.relativo13/" target="_blank" rel="noopener" title="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar entre modo claro y oscuro" title="Cambiar tema">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir navegación">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <section class="section project-detail reveal">
+      <div class="sp-topbar">
+        <a href="../index.html" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Volver al inicio
+        </a>
+        <a href="azonet.html" class="back-link" hreflang="en" lang="en" aria-label="View this page in English">EN</a>
+      </div>
+
+      <div class="project-header">
+        <div class="institution">Instituto de Física e Instituto de Investigaciones en Materiales, UNAM</div>
+        <h1>AzoNet — Predicción del espesor de películas delgadas</h1>
+        <div class="date">Enero 2025 — Agosto 2025 &middot; Ciudad Universitaria, México</div>
+        <a class="pub-badge" href="https://doi.org/10.1021/acsomega.6c10558" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 2.1 3.2-.3.7 3.1 2.8 1.6-1.3 2.9 1.3 2.9-2.8 1.6-.7 3.1-3.2-.3L12 22l-2.4-2.1-3.2.3-.7-3.1-2.8-1.6L4.2 12 2.9 9.1l2.8-1.6.7-3.1 3.2.3z"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></svg>
+          <span><strong>Publicado</strong> &middot; <em>ACS Omega</em> 2026, 11, 69373&#8288;–&#8288;69380&nbsp;&rarr;</span>
+        </a>
+      </div>
+
+      <div class="project-meta">
+        <div class="project-meta-item">
+          <h4>Rol</h4>
+          <p>Desarrollador de IA — Modelado de aprendizaje automático (contrato freelance de 6 meses)</p>
+        </div>
+        <div class="project-meta-item">
+          <h4>Tipo de modelo</h4>
+          <p>Autocodificador convolucional con conexiones de salto (estilo U-Net) + FCNN</p>
+        </div>
+        <div class="project-meta-item">
+          <h4>Desempeño</h4>
+          <p>MAPE 5.3% &middot; MAE 15.7 nm (sintéticos) &middot; MAPE 6.91% &middot; MAE 22.7 nm (145 películas experimentales)</p>
+        </div>
+      </div>
+
+      <div class="project-authors">
+        <h4>Autores</h4>
+        <p>Víctor Manuel Guerrero-Sosa, Angélica Carrillo-Verduzco, Juan Carlos Alonso-Huitrón, Alan Gabriel Amaro-Colin, Miguel Esquivel-García, Xim Bokhimi</p>
+        <p class="author-affil">Instituto de Investigaciones en Materiales e Instituto de Física, Universidad Nacional Autónoma de México</p>
+      </div>
+
+      <div class="project-body">
+        <h2>Descripción general</h2>
+        <p>
+          Los óxidos conductores transparentes (TCO) son semiconductores de banda prohibida ancha que combinan una alta
+          transparencia óptica con una notable conductividad eléctrica, lo que los hace esenciales en LEDs, celdas fotovoltaicas,
+          pantallas planas, pantallas táctiles y fotodetectores. Aunque el óxido de indio y estaño (ITO) domina las aplicaciones
+          comerciales, su alto costo y la inestabilidad en el suministro de indio han impulsado la búsqueda de alternativas. El óxido
+          de zinc dopado con aluminio (AZO) ha surgido como un reemplazo prometedor y económico, con un desempeño optoelectrónico
+          comparable.
+        </p>
+        <p>
+          Medir con precisión el espesor de las películas delgadas es fundamental para fabricar dispositivos y optimizar su
+          desempeño, pero los métodos convencionales — el análisis de franjas de interferencia o el ajuste de espectros con modelos
+          ópticos rigurosos — son computacionalmente costosos, sensibles a los parámetros iniciales y lentos. AzoNet resuelve este
+          problema con un modelo de aprendizaje profundo supervisado que predice el espesor de películas de AZO directamente a partir
+          de sus espectros de transmitancia óptica, ofreciendo una herramienta de caracterización rápida, no destructiva y precisa.
+        </p>
+        <p>
+          El modelo acopla un autocodificador convolucional con conexiones de salto cortas (similar a U-Net) a una red neuronal
+          totalmente conectada. Se entrenó con <strong>1.2 millones de espectros sintéticos</strong> generados a partir de un modelo
+          óptico de 12 parámetros ajustado a 145 películas experimentales de AZO (100–1500 nm), usando Modelos de Mezclas Gaussianas
+          para capturar la distribución de los parámetros en cinco regiones de espesor. El modelo alcanzó un
+          <strong>MAPE de 5.3%</strong> (MAE de 15.7 nm) en el conjunto de validación sintético y un <strong>MAPE de 6.91%</strong>
+          (MAE de 22.7 nm) en las 145 películas experimentales. El trabajo se publicó en <em>ACS Omega</em> (2026) en acceso
+          abierto bajo licencia CC-BY 4.0.
+        </p>
+        <figure class="paper-figure">
+          <img src="../images/azonet/graphical-abstract.png" alt="Espectros de transmitancia de películas de AZO de distintos espesores que entran al modelo de aprendizaje profundo, el cual predice un espesor entre 100 y 1500 nm" loading="lazy">
+          <figcaption><strong>Resumen gráfico.</strong> Los espectros de transmitancia óptica entran al modelo de aprendizaje profundo, que predice el espesor de la película (100–1500 nm).</figcaption>
+        </figure>
+
+        <h2>Metodología y arquitectura</h2>
+
+        <h3>Generación de datos</h3>
+        <p>
+          Se depositaron 145 películas delgadas de AZO (100–1500 nm) sobre vidrio mediante depósito químico en fase vapor asistido
+          por aerosol, y se midieron sus espectros de transmitancia entre 190 y 1100 nm (911 puntos por espectro, con resolución de
+          1 nm). Cada espectro se ajustó con la teoría de transmisión óptica de Alonso et al. — espesor, coeficiente de absorción,
+          índice de refracción (dispersión tipo Sellmeier), rugosidad en ambas interfaces de la película y concentración de
+          portadores — optimizando sus <strong>12 parámetros libres</strong> con el algoritmo de
+          <strong>Evolución Diferencial</strong>.
+        </p>
+        <p>
+          Los parámetros ajustados se agruparon en cinco regiones de espesor (100–250, 250–600, 600–950, 950–1100 y 1100–1500 nm).
+          Dentro de cada región, Modelos de Mezclas Gaussianas (GMM) capturaron la distribución de cada parámetro. Al muestrear estas
+          distribuciones se generaron <strong>240,000 espectros sintéticos por región</strong> — 1.2 millones de muestras en total —,
+          cada uno formado por 911 valores de transmitancia (X) y el espesor correspondiente (Y). El conjunto de datos, mezclado
+          aleatoriamente, se dividió en 80% entrenamiento, 10% validación y 10% prueba.
+        </p>
+
+        <h3>Arquitectura de aprendizaje profundo</h3>
+        <p>
+          Una primera red totalmente conectada (Figura 1) mostró una precisión predictiva pobre: sus predicciones sobre los datos de
+          prueba se desvían considerablemente de los espesores reales (Figura 2).
+        </p>
+        <div class="paper-figure-row">
+          <figure class="paper-figure">
+            <img src="../images/azonet/fig1.png" alt="Red totalmente conectada con 911 entradas, capas ocultas de 470, 340 y 330 nodos y un nodo de salida" loading="lazy">
+            <figcaption><strong>Figura 1.</strong> Arquitectura del modelo de aprendizaje inicial desarrollado para predecir el espesor de la película.</figcaption>
+          </figure>
+          <figure class="paper-figure">
+            <img src="../images/azonet/fig2.png" alt="Gráfica de dispersión del espesor inferido contra el real para el modelo inicial, con gran dispersión alrededor de la recta identidad" loading="lazy">
+            <figcaption><strong>Figura 2.</strong> Espesor predicho vs. real para los datos de prueba, modelo inicial totalmente conectado.</figcaption>
+          </figure>
+        </div>
+        <p>
+          Por ello se agregó un autocodificador convolucional con conexiones de salto antes de la red (Figura 3), para extraer
+          características más ricas del espectro:
+        </p>
+        <figure class="paper-figure">
+          <img src="../images/azonet/fig3.png" alt="Diagrama de bloques: el espectro de transmitancia entra a un autocodificador con conexiones de salto y luego a una red multicapa totalmente conectada, que entrega el espesor de la película" loading="lazy">
+          <figcaption><strong>Figura 3.</strong> Modelo de aprendizaje profundo desarrollado para predecir el espesor de la película.</figcaption>
+        </figure>
+        <ul>
+          <li><strong>Codificador:</strong> Cuatro bloques — capas convolucionales con tamaños de kernel de 150 y 50, activación Leaky ReLU y normalización por lotes, intercaladas con <em>average pooling</em> (tamaño y paso de 4) para reducir la resolución: 911 → 227 → 56 características.</li>
+          <li><strong>Espacio latente:</strong> Dos capas convolucionales (kernel de 5) que producen 84 mapas de características con 56 características cada uno.</li>
+          <li><strong>Decodificador:</strong> Cuatro bloques con sobremuestreo por vecino más cercano (factor 4) que restauran la resolución (56 → 227 → 911 características). Las conexiones de salto concatenan los mapas del codificador en los bloques correspondientes del decodificador para recuperar el detalle en alta resolución; una convolución final de 1×1 entrega un único mapa de 911 características.</li>
+          <li><strong>FCNN:</strong> La salida del decodificador, de 911 elementos, alimenta una red totalmente conectada con tres capas ocultas (470, 340 y 330 nodos), cada una seguida de <em>dropout</em> (0.35) y normalización por lotes. Un único nodo de salida con activación ReLU predice el espesor.</li>
+        </ul>
+        <figure class="paper-figure">
+          <img src="../images/azonet/fig4.png" alt="Bloques del codificador: dos capas convolucionales de 21 mapas con 911 características, reducción a 227, dos capas de 42 mapas y reducción a 56" loading="lazy">
+          <figcaption><strong>Figura 4.</strong> Bloques del codificador con el detalle de las capas que los componen.</figcaption>
+        </figure>
+        <figure class="paper-figure paper-figure--narrow">
+          <img src="../images/azonet/fig5.png" alt="Espacio latente: dos capas convolucionales de 84 mapas de características con 56 características cada uno" loading="lazy">
+          <figcaption><strong>Figura 5.</strong> Generación del espacio latente.</figcaption>
+        </figure>
+        <figure class="paper-figure">
+          <img src="../images/azonet/fig6.png" alt="Bloques del decodificador: sobremuestreo de 56 a 227 y 911 características, con mapas del codificador concatenados, terminando en un único mapa de 911 características" loading="lazy">
+          <figcaption><strong>Figura 6.</strong> Bloques del decodificador con el detalle de las capas que los componen.</figcaption>
+        </figure>
+
+        <h3>Entrenamiento</h3>
+        <p>
+          El modelo se implementó en <strong>Keras 3</strong> con <strong>TensorFlow</strong> como backend y se entrenó durante
+          <strong>1000 épocas</strong> con el optimizador Adam, pérdida MAE, una tasa de aprendizaje con decaimiento coseno a partir
+          de 0.0001 y un tamaño de lote de 512, en GPUs NVIDIA A100 (80 GB). El tamaño de las capas, el número de filtros y las
+          tasas de <em>dropout</em> provienen del ajuste de hiperparámetros. El MAE final fue de 15.8 nm en entrenamiento y 15.7 nm
+          en validación, con un MAPE de 5.3% en ambos.
+        </p>
+        <figure class="paper-figure paper-figure--narrow">
+          <img src="../images/azonet/fig7.png" alt="MAE de entrenamiento y validación a lo largo de 1000 épocas, convergiendo a unos 16 nm" loading="lazy">
+          <figcaption><strong>Figura 7.</strong> Valor de la función de pérdida a lo largo de las épocas de entrenamiento.</figcaption>
+        </figure>
+
+        <h3>Resultados</h3>
+        <p>
+          En el conjunto de prueba de 120,000 muestras, las predicciones se alinean estrechamente con la recta identidad (Figura 8),
+          una mejora notable frente a la red totalmente conectada inicial (Figura 2). Aplicado a las 145 películas experimentales,
+          el modelo predijo el espesor con un MAPE de 6.91% y un MAE de 22.7 nm respecto a los espesores obtenidos al ajustar sus
+          espectros (Figura 9).
+        </p>
+        <div class="paper-figure-row">
+          <figure class="paper-figure">
+            <img src="../images/azonet/fig8.png" alt="Gráfica de dispersión del espesor inferido contra el real para el modelo de aprendizaje profundo en los datos de prueba, muy pegada a la recta identidad" loading="lazy">
+            <figcaption><strong>Figura 8.</strong> Espesor predicho vs. real para los datos de prueba, modelo de aprendizaje profundo.</figcaption>
+          </figure>
+          <figure class="paper-figure">
+            <img src="../images/azonet/fig9.png" alt="Gráfica de dispersión del espesor predicho contra el experimental para las 145 películas reales de AZO" loading="lazy">
+            <figcaption><strong>Figura 9.</strong> Espesor predicho vs. experimental para las 145 películas de AZO.</figcaption>
+          </figure>
+        </div>
+        <p class="paper-figure-credit">
+          Figuras reproducidas de Guerrero-Sosa et al., <em>ACS Omega</em> 2026, 11, 69373–69380,
+          <a href="https://doi.org/10.1021/acsomega.6c10558" target="_blank" rel="noopener">doi:10.1021/acsomega.6c10558</a>, bajo licencia CC-BY 4.0.
+        </p>
+
+        <h2>Logros clave</h2>
+        <ul>
+          <li>Generé <strong>1.2 millones de muestras sintéticas</strong> a partir de distribuciones de Modelos de Mezclas Gaussianas en cinco regiones de espesor, capturando la variabilidad real de los parámetros de 145 películas experimentales de AZO.</li>
+          <li>Apliqué optimización global (<strong>Evolución Diferencial</strong>) para ajustar un modelo óptico de 12 parámetros a espectros de transmitancia experimentales, extrayendo parámetros con significado físico para la síntesis de datos.</li>
+          <li>Superé ampliamente a una red totalmente conectada de referencia al agregar un <strong>autocodificador convolucional con conexiones de salto</strong> para la extracción de características.</li>
+          <li>Alcancé un <strong>MAPE de 5.3%</strong> en datos sintéticos y un <strong>MAPE de 6.91%</strong> (MAE de 22.7 nm) en 145 películas experimentales.</li>
+          <li>Desarrollé un <strong>ejecutable independiente con una interfaz gráfica amigable</strong> (TTK Bootstrap) para desplegar y visualizar predicciones, haciendo la herramienta accesible al personal de laboratorio.</li>
+          <li>Presenté los resultados en el <strong>Congreso Nacional de Física 2025</strong> en México.</li>
+          <li>Publicado como <strong>"A Deep Learning Approach for Thickness Determination of AZO Thin Films"</strong> en <em>ACS Omega</em> 2026, 11, 69373–69380.</li>
+        </ul>
+
+        <div class="project-tags">
+          <span class="tag">U-NET</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">Keras 3</span>
+          <span class="tag tag-gold">Datos sintéticos (1.2M muestras)</span>
+          <span class="tag">Modelos de Mezclas Gaussianas</span>
+          <span class="tag">Evolución Diferencial</span>
+          <span class="tag">Autocodificador</span>
+          <span class="tag">Conexiones de salto</span>
+          <span class="tag">Leaky ReLU</span>
+          <span class="tag">Normalización por lotes</span>
+          <span class="tag">TTKBootstrap</span>
+          <span class="tag">Interfaz Tkinter</span>
+          <span class="tag">Ajuste de curvas no lineal</span>
+          <span class="tag tag-gold">ACS Omega</span>
+          <span class="tag">Cómputo científico</span>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 2.5rem;">Recursos</h2>
+      <div class="project-links">
+        <div class="project-link-item">
+          <h4>Artículo — ACS Omega</h4>
+          <p>Guerrero-Sosa, V. M.; Carrillo-Verduzco, A.; Alonso-Huitrón, J. C.; Amaro-Colin, A. G.; Esquivel-García, M.; Bokhimi, X. "A Deep Learning Approach for Thickness Determination of AZO Thin Films." <em>ACS Omega</em> 2026, 11, 69373–69380. Acceso abierto (CC-BY 4.0). Artículo en inglés.</p>
+          <a href="https://doi.org/10.1021/acsomega.6c10558" target="_blank" rel="noopener">Leer el artículo &rarr;</a>
+        </div>
+        <div class="project-link-item">
+          <h4>Usar Azo-Net — Google Colaboratory</h4>
+          <p>Notebook interactivo para probar el modelo AzoNet. Descarga el modelo, los datos de fondo y una muestra de prueba; grafica el espectro y el espectro normalizado, ejecuta predicciones con Keras y compara el espesor predicho con el de la muestra original.</p>
+          <a href="https://drive.google.com/file/d/1GrzHIK72-Ef4cB6Rb5x1xiAb0j33JjTJ/view?usp=sharing" target="_blank" rel="noopener">Abrir notebook &rarr;</a>
+        </div>
+        <div class="project-link-item">
+          <h4>Evolución Diferencial — Google Colaboratory</h4>
+          <p>Notebook para ajustar espectros de transmitancia experimentales con el modelo teórico de Alonso mediante el algoritmo de Evolución Diferencial. Requiere un espectro de transmitancia y una estimación inicial del espesor con su incertidumbre. Devuelve los parámetros optimizados: espesor, rugosidad, coeficientes de Sellmeier, valores de absorción y densidad de portadores.</p>
+          <a href="https://drive.google.com/file/d/15EbgNeVvbOfmeEGj0bpYkEV0Z7w-XsVT/view?usp=drive_link" target="_blank" rel="noopener">Abrir notebook &rarr;</a>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 2.5rem;">Galería</h2>
+      <div class="project-gallery">
+        <img src="../images/national_congress_physics/picture_with_my_poster.jpeg" alt="Póster de AzoNet en el Congreso Nacional de Física">
+        <img src="../images/national_congress_physics/picture_with_a_friend.jpeg" alt="En el congreso">
+        <img src="../images/national_congress_physics/picture_with_friends.jpeg" alt="Con colegas">
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-social">
+        <a href="https://github.com/AlanAmaro13" target="_blank" rel="noopener" title="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/alanamaro/" target="_blank" rel="noopener" title="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/todo.es.relativo13/" target="_blank" rel="noopener" title="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Alan Amaro. Todos los derechos reservados.</p>
+    </footer>
+
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+</html>

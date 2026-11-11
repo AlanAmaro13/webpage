@@ -1,0 +1,345 @@
+/* ==========================================================================
+   Simplify project page — uses Simplify's own teal branding on top of the
+   portfolio's neumorphic tokens (so light/dark themes keep working).
+   ========================================================================== */
+
+.brand-simplify {
+  --accent: #0d9488;
+  --accent-soft: rgba(20, 184, 166, 0.16);
+  --mint: #0b7a70;
+  --sp-danger: #dc2626;
+  --sp-p-low: #f2b5b5;
+  --sp-p-med: #e06c6c;
+  --sp-p-high: #c0392b;
+  --sp-g-low: #a7d9b5;
+  --sp-g-med: #5fbf77;
+  --sp-g-high: #2d8a4e;
+}
+
+[data-theme='dark'] .brand-simplify {
+  --accent: #2dd4bf;
+  --accent-soft: rgba(45, 212, 191, 0.16);
+  --mint: #5eead4;
+  --sp-danger: #f87171;
+  --sp-p-low: #7a4a4a;
+  --sp-p-med: #d96c6c;
+  --sp-p-high: #ef5350;
+  --sp-g-low: #3f5c48;
+  --sp-g-med: #4e9e66;
+  --sp-g-high: #66d28e;
+}
+
+/* Logo */
+.sp-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.sp-logo-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  background: #0d9488;
+  color: #fff;
+  box-shadow: var(--shadow-raised-sm);
+}
+
+.sp-accent {
+  color: var(--accent);
+}
+
+.project-body code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding: 0.1em 0.4em;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+/* Board preview */
+.sp-preview {
+  margin: 2.5rem 0 1rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  background: var(--bg);
+  box-shadow: var(--shadow-raised);
+}
+
+.sp-kpis {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.sp-kpi {
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem 0.9rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-raised-sm);
+  line-height: 1.3;
+}
+
+.sp-kpi strong {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.sp-kpi span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.sp-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.9rem;
+}
+
+.sp-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-height: 190px;
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-inset-sm);
+}
+
+.sp-col-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0 0.2rem 0.2rem;
+}
+
+.sp-count {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding: 0.05rem 0.5rem;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-raised-sm);
+}
+
+.sp-card {
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid transparent;
+  background: var(--bg);
+  box-shadow: var(--shadow-raised-sm);
+  line-height: 1.35;
+}
+
+.project-body .sp-card p {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.sp-p-low { border-left-color: var(--sp-p-low); }
+.sp-p-med { border-left-color: var(--sp-p-med); }
+.sp-p-high { border-left-color: var(--sp-p-high); }
+.sp-g-low { border-left-color: var(--sp-g-low); }
+.sp-g-med { border-left-color: var(--sp-g-med); }
+.sp-g-high { border-left-color: var(--sp-g-high); }
+
+.sp-progress {
+  height: 5px;
+  margin-top: 0.5rem;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-inset-sm);
+  overflow: hidden;
+}
+
+.sp-progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+}
+
+.sp-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.sp-danger {
+  color: var(--sp-danger) !important;
+}
+
+/* Features + steps (override the default bulleted list) */
+.project-body ul.sp-features,
+.sp-steps {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.project-body ul.sp-features {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.sp-steps {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.project-body ul.sp-features li,
+.sp-steps li {
+  padding: 1.25rem 1.4rem;
+  border-radius: var(--radius-lg);
+  background: var(--bg);
+  box-shadow: var(--shadow-raised);
+}
+
+.project-body ul.sp-features li::before {
+  display: none;
+}
+
+.project-body .sp-features h3,
+.project-body .sp-steps h3 {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+  font-size: 1rem;
+}
+
+.project-body .sp-features p,
+.project-body .sp-steps p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.sp-step-num {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 0.75rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: #fff;
+  background: #0d9488;
+  box-shadow: var(--shadow-raised-sm);
+}
+
+/* Call to action */
+.sp-cta {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.project-body .sp-cta p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.sp-btn {
+  display: inline-flex;
+  padding: 0.85rem 2rem;
+  border-radius: 13px;
+  font-weight: 700;
+  color: #fff;
+  background: #0d9488;
+  box-shadow: var(--shadow-raised);
+  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.sp-btn:hover {
+  color: #fff;
+  background: #0b7a70;
+}
+
+.sp-btn:active {
+  box-shadow: var(--shadow-press);
+}
+
+.sp-btn:focus-visible {
+  outline: 3px solid #14b8a6;
+  outline-offset: 3px;
+}
+
+.project-body .sp-cta .sp-hint {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.sp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.sp-actions-center {
+  justify-content: center;
+  margin-top: 0;
+}
+
+.sp-btn.sp-btn-secondary {
+  color: var(--accent);
+  background: var(--bg);
+}
+
+.sp-btn.sp-btn-secondary:hover {
+  color: var(--mint);
+  background: var(--bg);
+}
+
+/* Homepage card logo */
+.project-card-image.sp-card-logo {
+  gap: 14px;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .sp-kpis {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* swipeable columns, like the real app on phones */
+  .sp-board {
+    grid-template-columns: repeat(4, 78%);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 4px 4px 12px;
+  }
+
+  .sp-col {
+    min-height: 0;
+    scroll-snap-align: start;
+  }
+
+  .sp-steps {
+    grid-template-columns: 1fr;
+  }
+}

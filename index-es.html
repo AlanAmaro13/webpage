@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alan Amaro — Físico e ingeniero de IA. Portafolio de aprendizaje automático, cómputo científico y desarrollo de productos con IA.">
+  <title>Alan Amaro — Físico e ingeniero de IA</title>
+  <link rel="icon" href="brand/logo/amx-favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0E0E10">
+  <link rel="stylesheet" href="brand/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/simplify.css">
+  <link rel="stylesheet" href="css/unified.css">
+  <link rel="stylesheet" href="css/nova.css">
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="es" href="index-es.html">
+</head>
+<body>
+  <div class="content-wrapper">
+
+    <nav class="navbar">
+      <a href="index-es.html" class="nav-logo" aria-label="Inicio"><svg viewBox="0 140 1179 300" role="img" aria-label="AmaroX — Alan Amaro"><defs><clipPath id="amx-band"><rect x="0" y="200" width="2000" height="180"/></clipPath></defs><g fill="none" stroke="currentColor" stroke-width="18" clip-path="url(#amx-band)"><path d="M50 400 L150 200 L250 400"/><path d="M89 322 L211 322"/><path d="M270 380 V255"/><path d="M270 300 C270 268 292 255 318 255 C344 255 365 270 365 300 V380"/><path d="M365 300 C365 268 387 255 413 255 C439 255 460 270 460 300 V380"/><path d="M624 255 V380"/><path d="M684 380 V255"/><path d="M684 305 C684 272 706 255 742 255"/></g><g fill="none" stroke="currentColor" stroke-width="18"><ellipse cx="568" cy="317.5" rx="56" ry="56.5"/><ellipse cx="829" cy="317.5" rx="58" ry="56.5"/></g><g fill="none" stroke="var(--amx-x)" stroke-width="36" clip-path="url(#amx-band)"><path d="M928.8 180 L1112.1 400"/><path d="M1112.1 180 L928.8 400"/></g></svg></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#brand">Marca</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-social">
+          <a href="https://github.com/AlanAmaro13" target="_blank" rel="noopener" title="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/alanamaro/" target="_blank" rel="noopener" title="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/todo.es.relativo13/" target="_blank" rel="noopener" title="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+        <a href="index.html" class="lang-switch" hreflang="en" lang="en" aria-label="View this page in English">EN</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar entre modo claro y oscuro" title="Cambiar tema">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir navegación">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">Físico · Ingeniero de IA · Innovation Engineer</span>
+        <img src="images/profile/Perfil2.png" alt="Retrato de Alan Amaro" class="hero-avatar" onerror="this.style.display='none'">
+        <h1 class="hero-name">Alan Amaro<span>.</span></h1>
+        <p class="hero-title">De la investigación al producto.<span class="alt" lang="en">From research to product.</span></p>
+        <p class="hero-tagline">
+          Físico e ingeniero de IA que convierte investigación científica en productos de software desplegables:
+          del diseño de redes neuronales y datos sintéticos a aplicaciones en producción para escritorio, web y nube.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+          <a href="#contact" class="btn btn-outline">Escríbeme</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="about">
+      <span class="eyebrow">01 / Sobre mí</span>
+      <h2 class="section-title">Rigor en la investigación,<br>responsabilidad en producción.</h2>
+      <div class="section-line"></div>
+      <div class="about-text">
+        <p>
+          Soy físico e investigador en IA, enfocado en convertir ciencia compleja en productos de IA desplegables y de alto impacto.
+          Mi experiencia une la ejecución técnica full-stack con el desarrollo estratégico de producto, con sistemas escalables
+          construidos para química computacional, ciencia de materiales y diagnóstico médico.
+        </p>
+        <p>
+          Mis logros más importantes implican la responsabilidad de principio a fin de herramientas científicas de IA: desde la generación
+          de datos sintéticos y el diseño de arquitecturas neuronales propias hasta aplicaciones de escritorio listas para producción y
+          sistemas agénticos desplegados en la nube. Soy licenciado en Física por la <strong>Universidad Nacional Autónoma de México (UNAM)</strong>,
+          con especialización en Inteligencia Artificial, Ciencia de Materiales, Ciencia de Datos y Química Computacional.
+        </p>
+        <p>
+          Me motiva el reto de convertir investigación de frontera en tecnología confiable y centrada en las personas.
+          Busco colaborar con innovadores y organizaciones que quieran aprovechar la IA de vanguardia
+          para resolver los retos más urgentes de la ciencia y la industria.
+        </p>
+      </div>
+    </section>
+
+    <section class="section reveal" id="projects">
+      <span class="eyebrow">02 / Proyectos</span>
+      <h2 class="section-title">Proyectos</h2>
+      <p class="section-subtitle">Soluciones de IA de principio a fin en química computacional, ciencia de materiales, paleontología y más.</p>
+      <div class="section-line"></div>
+      <div class="projects-grid">
+
+        <a href="projects/simplify-es.html" class="project-card">
+          <div class="project-card-image placeholder sp-card-logo">
+            <span class="sp-logo-mark" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 13 9 18 20 6"/></svg>
+            </span>
+            simplify
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-institution">Simplify &middot; Producto propio</div>
+            <h3 class="project-card-title">Simplify — Kanban tranquilo para tus tareas</h3>
+            <p class="project-card-desc">Un tablero kanban sin configuración, con subtareas, varios lienzos, recordatorios por Telegram y resúmenes por correo escritos con IA. En producción, solo por invitación.</p>
+            <div class="project-card-date">Jul 2026 — Actual</div>
+            <div class="project-card-tags">
+              <span class="tag">Next.js 16</span>
+              <span class="tag">Supabase</span>
+              <span class="tag tag-gold">DeepSeek</span>
+              <span class="tag">Vercel</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projects/unified-es.html" class="project-card">
+          <div class="project-card-image placeholder sp-card-logo">
+            <span class="sp-logo-mark un-mark" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-7"/><path d="M12 14c0-5 3-8 8-8-1 5-4 8-8 8z"/><path d="M12 14c-1-4-3-6-6-7 2 4 4 6 6 7z"/></svg>
+            </span>
+            unified
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-institution">Unified &middot; Producto propio</div>
+            <h3 class="project-card-title">Unified — Panel de vida personal</h3>
+            <p class="project-card-desc">Finanzas, inversiones, nutrición, sueño, agua, gimnasio y metas en un solo panel, con registro de comidas por IA y un coach de gimnasio con IA. En producción, solo por invitación.</p>
+            <div class="project-card-date">Sep 2026 — Actual</div>
+            <div class="project-card-tags">
+              <span class="tag">Next.js 16</span>
+              <span class="tag">Supabase</span>
+              <span class="tag tag-gold">DeepSeek</span>
+              <span class="tag">Chart.js</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projects/nova-es.html" class="project-card">
+          <div class="project-card-image placeholder sp-card-logo">
+            <span class="sp-logo-mark nv-mark" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+            </span>
+            nova
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-institution">Nova &middot; Producto propio</div>
+            <h3 class="project-card-title">Nova — Idiomas con IA</h3>
+            <p class="project-card-desc">Lecturas escritas con IA a tu nivel MCER en inglés, italiano, alemán o coreano, con vocabulario al tocar una palabra, cuestionarios, tutor con IA y tarjetas de memoria. En producción, solo por invitación.</p>
+            <div class="project-card-date">Jul 2026 — Actual</div>
+            <div class="project-card-tags">
+              <span class="tag">Next.js 16</span>
+              <span class="tag">Supabase</span>
+              <span class="tag tag-gold">DeepSeek</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projects/azonet-es.html" class="project-card">
+          <img src="images/national_congress_physics/picture_with_my_poster.jpeg" alt="AzoNet" class="project-card-image" onerror="this.parentElement.querySelector('.placeholder-fallback').style.display='flex'; this.style.display='none'">
+          <div class="project-card-image placeholder placeholder-fallback" style="display:none">&#9733;</div>
+          <div class="project-card-body">
+            <div class="project-card-institution">Institute of Physics &amp; Materials, UNAM</div>
+            <h3 class="project-card-title">AzoNet — U-Net para películas delgadas</h3>
+            <p class="project-card-desc">Modelo de aprendizaje profundo que predice el espesor de películas delgadas de AZO a partir de espectros de transmitancia. Entrenado con 1.2 M de espectros sintéticos; MAPE de 6.91% en películas reales. Publicado en ACS Omega.</p>
+            <div class="project-card-date">Jan 2025 — Aug 2025</div>
+            <div class="project-card-tags">
+              <span class="tag">U-NET</span>
+              <span class="tag">Keras 3</span>
+              <span class="tag tag-published"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 2.1 3.2-.3.7 3.1 2.8 1.6-1.3 2.9 1.3 2.9-2.8 1.6-.7 3.1-3.2-.3L12 22l-2.4-2.1-3.2.3-.7-3.1-2.8-1.6L4.2 12 2.9 9.1l2.8-1.6.7-3.1 3.2.3z"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8"/></svg> Publicado · ACS Omega</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projects/qsar-es.html" class="project-card">
+          <img src="images/internal_symposium_institute_chemistry/poster.jpeg" alt="QSAR" class="project-card-image" onerror="this.parentElement.querySelector('.placeholder-fallback').style.display='flex'; this.style.display='none'">
+          <div class="project-card-image placeholder placeholder-fallback" style="display:none">&#9874;</div>
+          <div class="project-card-body">
+            <div class="project-card-institution">FES Zaragoza &amp; Institute of Chemistry, UNAM</div>
+            <h3 class="project-card-title">Modelado predictivo QSAR</h3>
+            <p class="project-card-desc">Redes neuronales profundas para predecir la actividad biológica de compuestos contra el Alzheimer y antibióticos. MAPE de 5.52%, R² de 0.81.</p>
+            <div class="project-card-date">May 2025 — Dec 2025</div>
+            <div class="project-card-tags">
+              <span class="tag">Keras 3</span>
+              <span class="tag">DNN</span>
+              <span class="tag tag-gold">Información mutua</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projects/nexus-es.html" class="project-card">
+          <div class="project-card-image placeholder">&#9883;</div>
+          <div class="project-card-body">
+            <div class="project-card-institution">Nexus+</div>
+            <h3 class="project-card-title">Nexus+ — Asistentes de IA B2B</h3>
+            <p class="project-card-desc">Cofundé una startup SaaS que despliega asistentes agénticos de IA para el sector médico, con pipelines RAG e infraestructura en la nube.</p>
+            <div class="project-card-date">May 2025 — Dec 2025</div>
+            <div class="project-card-tags">
+              <span class="tag">RAG</span>
+              <span class="tag">DigitalOcean</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag tag-gold">n8n</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projects/paleonet-es.html" class="project-card">
+          <div class="project-card-image placeholder">&#9764;</div>
+          <div class="project-card-body">
+            <div class="project-card-institution">Institute of Geology, UNAM</div>
+            <h3 class="project-card-title">Paleo-Net — Reconstrucción 3D de fósiles</h3>
+            <p class="project-card-desc">U-Net convolucional 3D para restaurar especímenes fósiles dañados. Presentado en el XIX Congreso Nacional de Paleontología.</p>
+            <div class="project-card-date">Dec 2025 — Apr 2026</div>
+            <div class="project-card-tags">
+              <span class="tag">3D U-NET</span>
+              <span class="tag">Open3D</span>
+              <span class="tag tag-gold">Datos sintéticos</span>
+              <span class="tag">GPU</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projects/cansat-es.html" class="project-card">
+          <div class="project-card-image placeholder">&#9992;</div>
+          <div class="project-card-body">
+            <div class="project-card-institution">CanSat — University Space Program, UNAM</div>
+            <h3 class="project-card-title">Prototipo de satélite CanSat</h3>
+            <p class="project-card-desc">Dirigí el desarrollo de hardware y software de un satélite enlatado, con visualización de datos en tiempo real. Lugar 22 de 101 equipos a nivel nacional.</p>
+            <div class="project-card-date">Jan 2023 — May 2023</div>
+            <div class="project-card-tags">
+              <span class="tag">C++</span>
+              <span class="tag">Hardware</span>
+              <span class="tag tag-gold">Data Viz</span>
+              <span class="tag">Sensores</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projects/xrd-crystal-es.html" class="project-card">
+          <img src="images/institute_physics/picture_with_staff.jpeg" alt="XRD Crystal" class="project-card-image" onerror="this.parentElement.querySelector('.placeholder-fallback').style.display='flex'; this.style.display='none'">
+          <div class="project-card-image placeholder placeholder-fallback" style="display:none">&#9926;</div>
+          <div class="project-card-body">
+            <div class="project-card-institution">Institute of Physics, UNAM</div>
+            <h3 class="project-card-title">Clasificación de cristales por DRX</h3>
+            <p class="project-card-desc">U-Net para clasificar el sistema cristalino y predecir parámetros de red a partir de espectros de DRX. MAPE de 1%.</p>
+            <div class="project-card-date">Feb 2024 — Jan 2026</div>
+            <div class="project-card-tags">
+              <span class="tag">U-NET</span>
+              <span class="tag">XRD</span>
+              <span class="tag tag-gold">Ciencia de materiales</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="projects/cichaz-es.html" class="project-card">
+          <img src="images/calnali/view_from_mountains.jpeg" alt="CICHAZ" class="project-card-image" onerror="this.parentElement.querySelector('.placeholder-fallback').style.display='flex'; this.style.display='none'">
+          <div class="project-card-image placeholder placeholder-fallback" style="display:none">&#127795;</div>
+          <div class="project-card-body">
+            <div class="project-card-institution">CICHAZ — University of Padova, Italy</div>
+            <h3 class="project-card-title">Estancia de investigación en CICHAZ</h3>
+            <p class="project-card-desc">Colaboración internacional en rastreo 3D con OpenCV, redes de Raspberry Pi y datos sintéticos de simulación.</p>
+            <div class="project-card-date">Mar 2026 — Apr 2026</div>
+            <div class="project-card-tags">
+              <span class="tag">OpenCV</span>
+              <span class="tag">Raspberry Pi</span>
+              <span class="tag tag-gold">Rastreo 3D</span>
+              <span class="tag">Redes</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <section class="section reveal" id="skills">
+      <span class="eyebrow">03 / Habilidades</span>
+      <h2 class="section-title">Habilidades y tecnologías</h2>
+      <div class="section-line"></div>
+
+      <div class="skills-category">
+        <h3 class="skills-category-title">Lenguajes de programación</h3>
+        <div class="skills-list">
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">C++</span>
+          <span class="skill-badge">Java</span>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3 class="skills-category-title">IA y aprendizaje automático</h3>
+        <div class="skills-list">
+          <span class="skill-badge">Keras 3</span>
+          <span class="skill-badge">TensorFlow</span>
+          <span class="skill-badge">U-NET</span>
+          <span class="skill-badge">Redes neuronales profundas</span>
+          <span class="skill-badge">Scikit-Learn</span>
+          <span class="skill-badge">OpenCV</span>
+          <span class="skill-badge">SciPy</span>
+          <span class="skill-badge">H5Py</span>
+          <span class="skill-badge">Open3D</span>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3 class="skills-category-title">Datos e infraestructura</h3>
+        <div class="skills-list">
+          <span class="skill-badge">PostgreSQL (Vector)</span>
+          <span class="skill-badge">MongoDB</span>
+          <span class="skill-badge">Docker</span>
+          <span class="skill-badge">DigitalOcean VPS</span>
+          <span class="skill-badge">Git</span>
+          <span class="skill-badge">Pandas</span>
+          <span class="skill-badge">NumPy</span>
+          <span class="skill-badge">RAG Pipelines</span>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3 class="skills-category-title">Frameworks y herramientas</h3>
+        <div class="skills-list">
+          <span class="skill-badge">n8n</span>
+          <span class="skill-badge">TTKBootstrap</span>
+          <span class="skill-badge">Tkinter</span>
+          <span class="skill-badge">Flask</span>
+          <span class="skill-badge">NetworkX</span>
+          <span class="skill-badge">Seaborn</span>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3 class="skills-category-title">Idiomas</h3>
+        <ul class="lang-list">
+          <li><strong>Español</strong> — Nativo</li>
+          <li><strong>Inglés</strong> — B2 profesional. Certificado de dominio del inglés por la National School of Languages and Translation, UNAM</li>
+          <li><strong>Alemán</strong> — A2</li>
+          <li><strong>Italiano</strong> — A2</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section reveal" id="brand">
+      <span class="eyebrow">04 / Marca</span>
+      <h2 class="section-title">Inox: las herramientas en las<br>que confías cada mañana.</h2>
+      <p class="section-subtitle">Este sitio está construido sobre AmaroX, mi marca personal. Un termo negro mate y un espresso a la misma hora todos los días: objetos precisos, silenciosos y de uso diario. Cinco materiales, un acento cálido, Inter para las palabras y JetBrains Mono para los datos.</p>
+      <div class="section-line"></div>
+      <div class="brand-preview">
+        <div class="brand-swatches" aria-hidden="true">
+          <span style="background:#0E0E10"></span><span style="background:#1A1A1D"></span><span style="background:#A9ABAE"></span><span style="background:#EEECE7"></span><span style="background:#C29468"></span>
+        </div>
+        <div class="project-meta">
+        <div class="project-meta-item"><h4>Identidad</h4><p>Inox v3.0</p></div>
+        <div class="project-meta-item"><h4>Paleta</h4><p>Negro · Acero · Bone · Crema</p></div>
+        <div class="project-meta-item"><h4>Tipografía</h4><p>Inter · JetBrains Mono</p></div>
+        </div>
+        <a href="brand/brandbook/index.html?lang=es" class="btn btn-outline">Abrir el brandbook completo &rarr;</a>
+      </div>
+    </section>
+
+    <section class="section reveal" id="contact">
+      <span class="eyebrow">05 / Contacto</span>
+      <h2 class="section-title">Contacto</h2>
+      <p class="section-subtitle">Colaboremos. Investigación en IA, desarrollo de producto o consultoría: escríbeme.</p>
+      <div class="section-line"></div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Hablemos</h3>
+          <p>Busco colaborar con innovadores y organizaciones que quieran aprovechar la IA de vanguardia para resolver retos urgentes de la ciencia y la industria.</p>
+          <div class="contact-item">
+            <div class="icon-circle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <a href="mailto:alan@amarox.dev">alan@amarox.dev</a>
+          </div>
+          <div class="contact-item">
+            <div class="icon-circle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <span>Ciudad de México, México</span>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto o idea..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar correo</button>
+          <p class="form-hint">Abre tu app de correo con el mensaje ya escrito.</p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-social">
+        <a href="https://github.com/AlanAmaro13" target="_blank" rel="noopener" title="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/alanamaro/" target="_blank" rel="noopener" title="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/todo.es.relativo13/" target="_blank" rel="noopener" title="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Alan Amaro · amarox.dev</p>
+    </footer>
+
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
