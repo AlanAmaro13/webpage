@@ -1165,3 +1165,10 @@ img {
 .brand-preview .project-meta {
   margin-bottom: 2rem;
 }
+
+/* AzoNet card: drawn cover instead of a photo */
+.azo-cover svg {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 1rem;
+}
